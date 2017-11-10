@@ -15,6 +15,7 @@ namespace project_dingdong
         public AdminEditEmp()
         {
             InitializeComponent();
+
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -89,7 +90,7 @@ namespace project_dingdong
                     txt_wage.Enabled = true;
                     break;
 
-                case "Full-/Parttime:
+                case "Full-/Parttime":
                     txt_status.Enabled = true;
                     break;
 
@@ -130,6 +131,22 @@ namespace project_dingdong
         private void btn_save_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            AdminChooseEMP choose = new AdminChooseEMP();
+            choose.Show();
+            this.Hide();
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            Login l = new Login();
+            Console.Clear();
+            Console.WriteLine("logged out");
+            this.Hide();
+            l.Show();
         }
     }
 }

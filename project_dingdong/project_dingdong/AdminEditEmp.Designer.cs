@@ -78,6 +78,7 @@
             this.btn_exit.TabIndex = 15;
             this.btn_exit.Text = "X";
             this.btn_exit.UseVisualStyleBackColor = false;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // btn_logout
             // 
@@ -88,6 +89,7 @@
             this.btn_logout.TabIndex = 14;
             this.btn_logout.Text = "logout";
             this.btn_logout.UseVisualStyleBackColor = false;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // label1
             // 
@@ -430,7 +432,7 @@
             // btn_edit
             // 
             this.btn_edit.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btn_edit.Location = new System.Drawing.Point(990, 468);
+            this.btn_edit.Location = new System.Drawing.Point(990, 509);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(113, 35);
             this.btn_edit.TabIndex = 100;

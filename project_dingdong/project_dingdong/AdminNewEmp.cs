@@ -26,5 +26,21 @@ namespace project_dingdong
         {
             
         }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            AdminChooseEMP choose = new AdminChooseEMP();
+            choose.Show();
+            this.Hide();
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            Login l = new Login();
+            Console.Clear();
+            Console.WriteLine("logged out");
+            this.Hide();
+            l.Show();
+        }
     }
 }

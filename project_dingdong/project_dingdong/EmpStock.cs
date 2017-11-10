@@ -16,5 +16,21 @@ namespace project_dingdong
         {
             InitializeComponent();
         }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            EmpStart emp_start = new EmpStart();
+            emp_start.Show();
+            this.Hide();
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            Login l = new Login();
+            Console.Clear();
+            Console.WriteLine("logged out");
+            this.Hide();
+            l.Show();
+        }
     }
 }

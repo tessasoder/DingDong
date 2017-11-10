@@ -30,7 +30,8 @@ namespace project_dingdong
         private void btn_emp_Click(object sender, EventArgs e)
         {
             AdminChooseEMP admin_choose_emp = new AdminChooseEMP();
-            admin_choose_emp.Show();          
+            admin_choose_emp.Show();
+            this.Hide();
         }
 
         private void btn_drinks_Click(object sender, EventArgs e)
@@ -43,6 +44,18 @@ namespace project_dingdong
         {
             AdminStock admin_stock = new AdminStock();
             admin_stock.Show();
+            this.Hide();
+        }
+
+        private void AdminStart_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            Show();
+            this.Hide();
         }
     }
 }

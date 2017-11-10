@@ -34,7 +34,6 @@
             this.btn_emp = new System.Windows.Forms.Button();
             this.btn_stock = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_exit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -97,16 +96,6 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Username";
             // 
-            // btn_exit
-            // 
-            this.btn_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_exit.Location = new System.Drawing.Point(1261, 36);
-            this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(54, 48);
-            this.btn_exit.TabIndex = 6;
-            this.btn_exit.Text = "X";
-            this.btn_exit.UseVisualStyleBackColor = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
@@ -125,7 +114,6 @@
             this.ClientSize = new System.Drawing.Size(1346, 577);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_stock);
             this.Controls.Add(this.btn_emp);
@@ -135,6 +123,7 @@
             this.Name = "AdminStart";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "AdminStart";
+            this.Load += new System.EventHandler(this.AdminStart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -148,7 +137,6 @@
         private System.Windows.Forms.Button btn_emp;
         private System.Windows.Forms.Button btn_stock;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

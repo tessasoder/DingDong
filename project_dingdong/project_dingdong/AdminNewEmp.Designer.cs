@@ -322,6 +322,7 @@
             this.btn_exit.TabIndex = 51;
             this.btn_exit.Text = "X";
             this.btn_exit.UseVisualStyleBackColor = false;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // btn_logout
             // 
@@ -332,6 +333,7 @@
             this.btn_logout.TabIndex = 50;
             this.btn_logout.Text = "logout";
             this.btn_logout.UseVisualStyleBackColor = false;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // label1
             // 

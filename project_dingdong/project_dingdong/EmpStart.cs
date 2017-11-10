@@ -29,7 +29,11 @@ namespace project_dingdong
 
         private void btn_logout_Click_1(object sender, EventArgs e)
         {
-
+            Login l = new Login();
+            Console.Clear();
+            Console.WriteLine("logged out");
+            this.Hide();
+            l.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -41,12 +45,25 @@ namespace project_dingdong
         {
             Order emp_order = new Order();
             emp_order.Show();
+            this.Hide();
         }
 
         private void btn_stock_emp_Click(object sender, EventArgs e)
         {
             EmpStock emp_stock = new EmpStock();
             emp_stock.Show();
+            this.Hide();
+        }
+
+        private void EmpStart_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            Show();
+            this.Hide();
         }
     }
 }

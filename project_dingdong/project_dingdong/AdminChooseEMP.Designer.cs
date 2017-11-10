@@ -47,16 +47,18 @@
             this.btn_exit.TabIndex = 11;
             this.btn_exit.Text = "X";
             this.btn_exit.UseVisualStyleBackColor = false;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // btn_logout
             // 
             this.btn_logout.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btn_logout.Location = new System.Drawing.Point(1169, 510);
+            this.btn_logout.Location = new System.Drawing.Point(1169, 514);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(113, 35);
             this.btn_logout.TabIndex = 10;
             this.btn_logout.Text = "logout";
             this.btn_logout.UseVisualStyleBackColor = false;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // label1
             // 
@@ -118,6 +120,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminChooseEMP";
             this.Text = "AdminNEWEMP";
+            this.Load += new System.EventHandler(this.AdminChooseEMP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

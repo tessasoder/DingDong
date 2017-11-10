@@ -21,12 +21,35 @@ namespace project_dingdong
         {
             AdminNewEmp admin_new = new AdminNewEmp();
             admin_new.Show();
+            this.Hide();
         }
 
         private void btn_edit_delete_Click(object sender, EventArgs e)
         {
             AdminEditEmp admin_edit_delete = new AdminEditEmp();
             admin_edit_delete.Show();
+            this.Hide();
+        }
+
+        private void AdminChooseEMP_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            AdminStart start = new AdminStart();
+            start.Show();
+            this.Hide();
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            Login l = new Login();
+            Console.Clear();
+            Console.WriteLine("logged out");
+            this.Hide();
+            l.Show();
         }
     }
 }
