@@ -59,6 +59,7 @@
             this.btn_stock_emp.TabIndex = 6;
             this.btn_stock_emp.Text = "Stock";
             this.btn_stock_emp.UseVisualStyleBackColor = false;
+            this.btn_stock_emp.Click += new System.EventHandler(this.btn_stock_emp_Click);
             // 
             // btn_order
             // 
@@ -70,6 +71,7 @@
             this.btn_order.TabIndex = 4;
             this.btn_order.Text = "New Order";
             this.btn_order.UseVisualStyleBackColor = false;
+            this.btn_order.Click += new System.EventHandler(this.btn_order_Click);
             // 
             // label1
             // 
