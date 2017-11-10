@@ -28,23 +28,32 @@ namespace project_dingdong
         private  void button1_Click(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection("server=eduweb.kb.local;user id=team09;password=T3amO9;persistsecurityinfo=True;database=team09;allowuservariables=True;");
-            MySqlCommand checkIfUname = new MySqlCommand("select * from Login where username=;");
+            MySqlCommand checkIfUname = new MySqlCommand("select * from Login", con);
 
-            try
+            if(tb_pass.Text == "" || tb_usern.Text == "")
             {
-                con.Open();
-
-
-                con.Close();
+                MessageBox.Show("Bitte Username und Passwort eingeben!", "Achtung",MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            catch (Exception ex)
+            else
             {
-                Console.WriteLine(ex);
+                try
+                {
+                    con.Open();
+                    Console.WriteLine("con success lol");
+                    checkIfUname.ExecuteNonQuery();
+
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
             }
+           
 
 
-
-
+            //////////////////////////////////////////////////////////
+            //login without db
             //if (tb_usern.Text == "admin" && tb_pass.Text == "123")
             //{
             //    AdminStart a = new AdminStart();
@@ -63,6 +72,7 @@ namespace project_dingdong
             //}
             //else
             //    MessageBox.Show("user not found");
+            //////////////////////////////////////////////////////////
         }
 
         private void tb_pass_TextChanged(object sender, EventArgs e)
@@ -73,6 +83,11 @@ namespace project_dingdong
         private void btn_exit_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
