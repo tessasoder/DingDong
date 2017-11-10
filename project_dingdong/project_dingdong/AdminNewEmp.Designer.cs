@@ -247,6 +247,7 @@
             this.txt_birthday.Name = "txt_birthday";
             this.txt_birthday.Size = new System.Drawing.Size(225, 20);
             this.txt_birthday.TabIndex = 60;
+            this.txt_birthday.EnabledChanged += new System.EventHandler(this.txt_birthday_EnabledChanged);
             // 
             // lbl_persid
             // 
@@ -388,6 +389,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminNewEmp";
             this.Text = "AdminNewEmp";
+            this.Load += new System.EventHandler(this.AdminNewEmp_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

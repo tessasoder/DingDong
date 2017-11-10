@@ -33,7 +33,7 @@
             this.btn_logout = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_delete = new System.Windows.Forms.Button();
-            this.btn_edit = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -61,6 +61,10 @@
             this.lbl_name = new System.Windows.Forms.Label();
             this.txt_name = new System.Windows.Forms.TextBox();
             this.btn_search = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.listbox_sort_by = new System.Windows.Forms.ListBox();
+            this.btn_go = new System.Windows.Forms.Button();
+            this.btn_edit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -106,15 +110,16 @@
             this.btn_delete.Text = "delete";
             this.btn_delete.UseVisualStyleBackColor = false;
             // 
-            // btn_edit
+            // btn_save
             // 
-            this.btn_edit.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btn_edit.Location = new System.Drawing.Point(983, 509);
-            this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Size = new System.Drawing.Size(113, 35);
-            this.btn_edit.TabIndex = 18;
-            this.btn_edit.Text = "edit";
-            this.btn_edit.UseVisualStyleBackColor = false;
+            this.btn_save.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_save.Location = new System.Drawing.Point(990, 509);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(113, 35);
+            this.btn_save.TabIndex = 18;
+            this.btn_save.Text = "save";
+            this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // pictureBox1
             // 
@@ -133,7 +138,7 @@
             this.groupBox1.Controls.Add(this.rdb_ding);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.rdb_dong);
-            this.groupBox1.Location = new System.Drawing.Point(847, 259);
+            this.groupBox1.Location = new System.Drawing.Point(847, 288);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 84);
             this.groupBox1.TabIndex = 95;
@@ -191,7 +196,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(844, 194);
+            this.label8.Location = new System.Drawing.Point(844, 223);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(92, 16);
             this.label8.TabIndex = 94;
@@ -199,7 +204,7 @@
             // 
             // txt_time
             // 
-            this.txt_time.Location = new System.Drawing.Point(833, 213);
+            this.txt_time.Location = new System.Drawing.Point(833, 242);
             this.txt_time.Name = "txt_time";
             this.txt_time.Size = new System.Drawing.Size(225, 20);
             this.txt_time.TabIndex = 93;
@@ -209,7 +214,7 @@
             this.Beziehungsstatus.AutoSize = true;
             this.Beziehungsstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Beziehungsstatus.ForeColor = System.Drawing.Color.White;
-            this.Beziehungsstatus.Location = new System.Drawing.Point(844, 133);
+            this.Beziehungsstatus.Location = new System.Drawing.Point(844, 162);
             this.Beziehungsstatus.Name = "Beziehungsstatus";
             this.Beziehungsstatus.Size = new System.Drawing.Size(118, 16);
             this.Beziehungsstatus.TabIndex = 92;
@@ -217,7 +222,7 @@
             // 
             // txt_status
             // 
-            this.txt_status.Location = new System.Drawing.Point(833, 152);
+            this.txt_status.Location = new System.Drawing.Point(833, 181);
             this.txt_status.Name = "txt_status";
             this.txt_status.Size = new System.Drawing.Size(225, 20);
             this.txt_status.TabIndex = 91;
@@ -227,7 +232,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(489, 304);
+            this.label3.Location = new System.Drawing.Point(489, 333);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 16);
             this.label3.TabIndex = 90;
@@ -235,7 +240,7 @@
             // 
             // txt_wage
             // 
-            this.txt_wage.Location = new System.Drawing.Point(478, 323);
+            this.txt_wage.Location = new System.Drawing.Point(478, 352);
             this.txt_wage.Name = "txt_wage";
             this.txt_wage.Size = new System.Drawing.Size(225, 20);
             this.txt_wage.TabIndex = 89;
@@ -245,7 +250,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(489, 249);
+            this.label4.Location = new System.Drawing.Point(489, 278);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 16);
             this.label4.TabIndex = 88;
@@ -253,7 +258,7 @@
             // 
             // txt_position
             // 
-            this.txt_position.Location = new System.Drawing.Point(478, 268);
+            this.txt_position.Location = new System.Drawing.Point(478, 297);
             this.txt_position.Name = "txt_position";
             this.txt_position.Size = new System.Drawing.Size(225, 20);
             this.txt_position.TabIndex = 87;
@@ -263,7 +268,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(489, 188);
+            this.label5.Location = new System.Drawing.Point(489, 217);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 16);
             this.label5.TabIndex = 86;
@@ -271,7 +276,7 @@
             // 
             // txt_location
             // 
-            this.txt_location.Location = new System.Drawing.Point(478, 207);
+            this.txt_location.Location = new System.Drawing.Point(478, 236);
             this.txt_location.Name = "txt_location";
             this.txt_location.Size = new System.Drawing.Size(225, 20);
             this.txt_location.TabIndex = 85;
@@ -281,7 +286,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(489, 133);
+            this.label6.Location = new System.Drawing.Point(489, 162);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(59, 16);
             this.label6.TabIndex = 84;
@@ -289,7 +294,7 @@
             // 
             // txt_adress
             // 
-            this.txt_adress.Location = new System.Drawing.Point(478, 152);
+            this.txt_adress.Location = new System.Drawing.Point(478, 181);
             this.txt_adress.Name = "txt_adress";
             this.txt_adress.Size = new System.Drawing.Size(225, 20);
             this.txt_adress.TabIndex = 83;
@@ -299,7 +304,7 @@
             this.lbl_birthday.AutoSize = true;
             this.lbl_birthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_birthday.ForeColor = System.Drawing.Color.White;
-            this.lbl_birthday.Location = new System.Drawing.Point(100, 304);
+            this.lbl_birthday.Location = new System.Drawing.Point(100, 333);
             this.lbl_birthday.Name = "lbl_birthday";
             this.lbl_birthday.Size = new System.Drawing.Size(79, 16);
             this.lbl_birthday.TabIndex = 82;
@@ -307,17 +312,18 @@
             // 
             // txt_birthday
             // 
-            this.txt_birthday.Location = new System.Drawing.Point(89, 323);
+            this.txt_birthday.Location = new System.Drawing.Point(89, 352);
             this.txt_birthday.Name = "txt_birthday";
             this.txt_birthday.Size = new System.Drawing.Size(225, 20);
             this.txt_birthday.TabIndex = 81;
+            this.txt_birthday.EnabledChanged += new System.EventHandler(this.txt_birthday_EnabledChanged);
             // 
             // lbl_persid
             // 
             this.lbl_persid.AutoSize = true;
             this.lbl_persid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_persid.ForeColor = System.Drawing.Color.White;
-            this.lbl_persid.Location = new System.Drawing.Point(100, 249);
+            this.lbl_persid.Location = new System.Drawing.Point(100, 278);
             this.lbl_persid.Name = "lbl_persid";
             this.lbl_persid.Size = new System.Drawing.Size(67, 16);
             this.lbl_persid.TabIndex = 80;
@@ -325,7 +331,7 @@
             // 
             // txt_persid
             // 
-            this.txt_persid.Location = new System.Drawing.Point(89, 268);
+            this.txt_persid.Location = new System.Drawing.Point(89, 297);
             this.txt_persid.Name = "txt_persid";
             this.txt_persid.Size = new System.Drawing.Size(225, 20);
             this.txt_persid.TabIndex = 79;
@@ -335,7 +341,7 @@
             this.lbl_surname.AutoSize = true;
             this.lbl_surname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_surname.ForeColor = System.Drawing.Color.White;
-            this.lbl_surname.Location = new System.Drawing.Point(100, 188);
+            this.lbl_surname.Location = new System.Drawing.Point(100, 217);
             this.lbl_surname.Name = "lbl_surname";
             this.lbl_surname.Size = new System.Drawing.Size(62, 16);
             this.lbl_surname.TabIndex = 78;
@@ -343,7 +349,7 @@
             // 
             // txt_surname
             // 
-            this.txt_surname.Location = new System.Drawing.Point(89, 207);
+            this.txt_surname.Location = new System.Drawing.Point(89, 236);
             this.txt_surname.Name = "txt_surname";
             this.txt_surname.Size = new System.Drawing.Size(225, 20);
             this.txt_surname.TabIndex = 77;
@@ -353,7 +359,7 @@
             this.lbl_name.AutoSize = true;
             this.lbl_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_name.ForeColor = System.Drawing.Color.White;
-            this.lbl_name.Location = new System.Drawing.Point(100, 133);
+            this.lbl_name.Location = new System.Drawing.Point(100, 162);
             this.lbl_name.Name = "lbl_name";
             this.lbl_name.Size = new System.Drawing.Size(45, 16);
             this.lbl_name.TabIndex = 76;
@@ -361,7 +367,7 @@
             // 
             // txt_name
             // 
-            this.txt_name.Location = new System.Drawing.Point(89, 152);
+            this.txt_name.Location = new System.Drawing.Point(89, 181);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(225, 20);
             this.txt_name.TabIndex = 75;
@@ -372,12 +378,65 @@
             this.btn_search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_search.BackgroundImage")));
             this.btn_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_search.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_search.Location = new System.Drawing.Point(239, 363);
+            this.btn_search.Location = new System.Drawing.Point(239, 392);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(75, 41);
             this.btn_search.TabIndex = 96;
             this.btn_search.UseVisualStyleBackColor = false;
             this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(216, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 13);
+            this.label2.TabIndex = 97;
+            this.label2.Text = "Search by... ";
+            // 
+            // listbox_sort_by
+            // 
+            this.listbox_sort_by.AllowDrop = true;
+            this.listbox_sort_by.BackColor = System.Drawing.Color.CadetBlue;
+            this.listbox_sort_by.FormattingEnabled = true;
+            this.listbox_sort_by.Items.AddRange(new object[] {
+            "Name",
+            "Surname",
+            "Person ID",
+            "Date of birth",
+            "Adress",
+            "Location",
+            "Position",
+            "Wage",
+            "Relationshipstatus",
+            "Full-/Parttime",
+            "Gender"});
+            this.listbox_sort_by.Location = new System.Drawing.Point(307, 78);
+            this.listbox_sort_by.Name = "listbox_sort_by";
+            this.listbox_sort_by.Size = new System.Drawing.Size(120, 17);
+            this.listbox_sort_by.TabIndex = 98;
+            // 
+            // btn_go
+            // 
+            this.btn_go.BackColor = System.Drawing.Color.White;
+            this.btn_go.Location = new System.Drawing.Point(478, 78);
+            this.btn_go.Name = "btn_go";
+            this.btn_go.Size = new System.Drawing.Size(75, 23);
+            this.btn_go.TabIndex = 99;
+            this.btn_go.Text = "Go";
+            this.btn_go.UseVisualStyleBackColor = false;
+            this.btn_go.Click += new System.EventHandler(this.btn_go_Click);
+            // 
+            // btn_edit
+            // 
+            this.btn_edit.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_edit.Location = new System.Drawing.Point(990, 468);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(113, 35);
+            this.btn_edit.TabIndex = 100;
+            this.btn_edit.Text = "edit";
+            this.btn_edit.UseVisualStyleBackColor = false;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // AdminEditEmp
             // 
@@ -385,6 +444,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(1346, 577);
+            this.Controls.Add(this.btn_edit);
+            this.Controls.Add(this.btn_go);
+            this.Controls.Add(this.listbox_sort_by);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label8);
@@ -408,7 +471,7 @@
             this.Controls.Add(this.lbl_name);
             this.Controls.Add(this.txt_name);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btn_edit);
+            this.Controls.Add(this.btn_save);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_logout);
@@ -416,6 +479,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminEditEmp";
             this.Text = "AdminEditEmp";
+            this.Load += new System.EventHandler(this.AdminEditEmp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -429,7 +493,7 @@
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_delete;
-        private System.Windows.Forms.Button btn_edit;
+        private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label7;
@@ -457,5 +521,9 @@
         private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.TextBox txt_name;
         private System.Windows.Forms.Button btn_search;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox listbox_sort_by;
+        private System.Windows.Forms.Button btn_go;
+        private System.Windows.Forms.Button btn_edit;
     }
 }

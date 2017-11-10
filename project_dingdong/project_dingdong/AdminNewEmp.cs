@@ -16,5 +16,15 @@ namespace project_dingdong
         {
             InitializeComponent();
         }
+
+        private void txt_birthday_EnabledChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdminNewEmp_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
