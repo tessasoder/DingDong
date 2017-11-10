@@ -20,16 +20,19 @@ namespace project_dingdong
             InitializeComponent();
 
             //lalalalla i bims 1 kommentar
-
+           
         }
 
-
+        public static List<string> uname = new List<string>();
+        public static List<string> pw = new List<string>();
+        public static MySqlConnection con = new MySqlConnection("server=eduweb.kb.local;username=team09;password=T3amO9;database=team09;");
         //test login db in progress
         private  void button1_Click(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection("server=eduweb.kb.local;user id=team09;password=T3amO9;persistsecurityinfo=True;database=team09;allowuservariables=True;");
-            MySqlCommand checkIfUname = new MySqlCommand("select * from Login", con);
-
+            
+           
+            MySqlCommand len = new MySqlCommand("select count(username) from Login;", con);
+            
             if(tb_pass.Text == "" || tb_usern.Text == "")
             {
                 MessageBox.Show("Bitte Username und Passwort eingeben!", "Achtung",MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -39,9 +42,12 @@ namespace project_dingdong
                 try
                 {
                     con.Open();
-                    Console.WriteLine("con success lol");
-                    checkIfUname.ExecuteNonQuery();
-
+                    Console.WriteLine("con success");
+                    for (int i = 0; i < 1; i++)
+                    {
+                        Console.WriteLine(i);
+                    }
+                    Console.WriteLine();
                     con.Close();
                 }
                 catch (Exception ex)
