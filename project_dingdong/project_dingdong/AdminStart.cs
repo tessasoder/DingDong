@@ -29,7 +29,20 @@ namespace project_dingdong
 
         private void btn_emp_Click(object sender, EventArgs e)
         {
+            AdminChooseEMP admin_choose_emp = new AdminChooseEMP();
+            admin_choose_emp.Show();          
+        }
 
+        private void btn_drinks_Click(object sender, EventArgs e)
+        {
+            //Lager form noch anlegen
+
+        }
+
+        private void btn_stock_Click(object sender, EventArgs e)
+        {
+            AdminStock admin_stock = new AdminStock();
+            admin_stock.Show();
         }
     }
 }

@@ -79,6 +79,7 @@
             this.btn_edit_delete.TabIndex = 13;
             this.btn_edit_delete.Text = "Edit / Delete";
             this.btn_edit_delete.UseVisualStyleBackColor = false;
+            this.btn_edit_delete.Click += new System.EventHandler(this.btn_edit_delete_Click);
             // 
             // btn_new
             // 
@@ -90,6 +91,7 @@
             this.btn_new.TabIndex = 12;
             this.btn_new.Text = "New";
             this.btn_new.UseVisualStyleBackColor = false;
+            this.btn_new.Click += new System.EventHandler(this.btn_new_Click);
             // 
             // pictureBox1
             // 

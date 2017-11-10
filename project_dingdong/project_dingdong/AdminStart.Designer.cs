@@ -60,6 +60,7 @@
             this.btn_drinks.TabIndex = 1;
             this.btn_drinks.Text = "Drinks";
             this.btn_drinks.UseVisualStyleBackColor = false;
+            this.btn_drinks.Click += new System.EventHandler(this.btn_drinks_Click);
             // 
             // btn_emp
             // 
@@ -83,6 +84,7 @@
             this.btn_stock.TabIndex = 3;
             this.btn_stock.Text = "Stock";
             this.btn_stock.UseVisualStyleBackColor = false;
+            this.btn_stock.Click += new System.EventHandler(this.btn_stock_Click);
             // 
             // label1
             // 

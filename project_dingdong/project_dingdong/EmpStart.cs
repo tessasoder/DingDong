@@ -36,5 +36,17 @@ namespace project_dingdong
         {
 
         }
+
+        private void btn_order_Click(object sender, EventArgs e)
+        {
+            Order emp_order = new Order();
+            emp_order.Show();
+        }
+
+        private void btn_stock_emp_Click(object sender, EventArgs e)
+        {
+            EmpStock emp_stock = new EmpStock();
+            emp_stock.Show();
+        }
     }
 }
