@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4301068E-2513-4F9B-9110-F867D3D3C49D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>project_dingdong</RootNamespace>
+    <AssemblyName>project_dingdong</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\Connector.NET 6.9\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminEditEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminEditEmp.Designer.cs">
+      <DependentUpon>AdminEditEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminChooseEMP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminChooseEMP.Designer.cs">
+      <DependentUpon>AdminChooseEMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminNewEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminNewEmp.Designer.cs">
+      <DependentUpon>AdminNewEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminStart.Designer.cs">
+      <DependentUpon>AdminStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminStock.Designer.cs">
+      <DependentUpon>AdminStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpStart.Designer.cs">
+      <DependentUpon>EmpStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpStock.Designer.cs">
+      <DependentUpon>EmpStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order.Designer.cs">
+      <DependentUpon>Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminEditEmp.resx">
+      <DependentUpon>AdminEditEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminChooseEMP.resx">
+      <DependentUpon>AdminChooseEMP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminNewEmp.resx">
+      <DependentUpon>AdminNewEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminStart.resx">
+      <DependentUpon>AdminStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminStock.resx">
+      <DependentUpon>AdminStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpStart.resx">
+      <DependentUpon>EmpStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpStock.resx">
+      <DependentUpon>EmpStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order.resx">
+      <DependentUpon>Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
