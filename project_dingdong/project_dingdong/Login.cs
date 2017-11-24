@@ -15,7 +15,7 @@ namespace project_dingdong
     public partial class Login : Form
     {
 
-        MySqlConnection con = new MySqlConnection("server=eduweb.kb.local;username=team09;password=T3amO9;database=team09;");
+        public static MySqlConnection con = new MySqlConnection("server=eduweb.kb.local;username=team09;password=T3amO9;database=team09;");
         int i;
         public Login()
         {

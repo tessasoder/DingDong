@@ -12,9 +12,21 @@ namespace project_dingdong
 {
     public partial class Order : Form
     {
+
+
         public Order()
         {
             InitializeComponent();
+
+            try
+            {
+                Login.con.Open();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -24,13 +36,10 @@ namespace project_dingdong
             this.Hide();
         }
 
-        private void btn_logout_Click(object sender, EventArgs e)
+
+        private void Order_Load(object sender, EventArgs e)
         {
-            Login l = new Login();
-            Console.Clear();
-            Console.WriteLine("logged out");
-            this.Hide();
-            l.Show();
+
         }
     }
 }

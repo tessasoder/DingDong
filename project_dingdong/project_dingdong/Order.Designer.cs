@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Order));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_save = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
-            this.btn_logout = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_beer = new System.Windows.Forms.Button();
             this.btn_wine = new System.Windows.Forms.Button();
@@ -40,28 +37,17 @@
             this.btn_specials = new System.Windows.Forms.Button();
             this.btn_babies = new System.Windows.Forms.Button();
             this.btn_mixed_drinks = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lbl_ordernum = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 647);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(221, 71);
-            this.pictureBox1.TabIndex = 55;
-            this.pictureBox1.TabStop = false;
             // 
             // btn_save
             // 
             this.btn_save.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btn_save.Location = new System.Drawing.Point(795, 669);
+            this.btn_save.Location = new System.Drawing.Point(956, 683);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(113, 35);
             this.btn_save.TabIndex = 54;
-            this.btn_save.Text = "save";
+            this.btn_save.Text = "bill";
             this.btn_save.UseVisualStyleBackColor = false;
             // 
             // btn_exit
@@ -74,17 +60,6 @@
             this.btn_exit.Text = "X";
             this.btn_exit.UseVisualStyleBackColor = false;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
-            // 
-            // btn_logout
-            // 
-            this.btn_logout.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btn_logout.Location = new System.Drawing.Point(956, 669);
-            this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(113, 35);
-            this.btn_logout.TabIndex = 52;
-            this.btn_logout.Text = "logout";
-            this.btn_logout.UseVisualStyleBackColor = false;
-            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // label1
             // 
@@ -101,9 +76,9 @@
             // 
             this.btn_beer.BackColor = System.Drawing.Color.White;
             this.btn_beer.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_beer.Location = new System.Drawing.Point(113, 102);
+            this.btn_beer.Location = new System.Drawing.Point(42, 69);
             this.btn_beer.Name = "btn_beer";
-            this.btn_beer.Size = new System.Drawing.Size(293, 220);
+            this.btn_beer.Size = new System.Drawing.Size(217, 48);
             this.btn_beer.TabIndex = 56;
             this.btn_beer.Text = "Beer";
             this.btn_beer.UseVisualStyleBackColor = false;
@@ -112,9 +87,9 @@
             // 
             this.btn_wine.BackColor = System.Drawing.Color.White;
             this.btn_wine.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_wine.Location = new System.Drawing.Point(427, 102);
+            this.btn_wine.Location = new System.Drawing.Point(265, 69);
             this.btn_wine.Name = "btn_wine";
-            this.btn_wine.Size = new System.Drawing.Size(293, 220);
+            this.btn_wine.Size = new System.Drawing.Size(217, 48);
             this.btn_wine.TabIndex = 57;
             this.btn_wine.Text = "Wine";
             this.btn_wine.UseVisualStyleBackColor = false;
@@ -123,9 +98,9 @@
             // 
             this.btn_shots.BackColor = System.Drawing.Color.White;
             this.btn_shots.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_shots.Location = new System.Drawing.Point(113, 335);
+            this.btn_shots.Location = new System.Drawing.Point(42, 123);
             this.btn_shots.Name = "btn_shots";
-            this.btn_shots.Size = new System.Drawing.Size(293, 220);
+            this.btn_shots.Size = new System.Drawing.Size(217, 48);
             this.btn_shots.TabIndex = 58;
             this.btn_shots.Text = "Shots";
             this.btn_shots.UseVisualStyleBackColor = false;
@@ -134,9 +109,9 @@
             // 
             this.btn_specials.BackColor = System.Drawing.Color.White;
             this.btn_specials.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_specials.Location = new System.Drawing.Point(427, 335);
+            this.btn_specials.Location = new System.Drawing.Point(265, 123);
             this.btn_specials.Name = "btn_specials";
-            this.btn_specials.Size = new System.Drawing.Size(293, 220);
+            this.btn_specials.Size = new System.Drawing.Size(217, 48);
             this.btn_specials.TabIndex = 59;
             this.btn_specials.Text = "Specials";
             this.btn_specials.UseVisualStyleBackColor = false;
@@ -145,9 +120,9 @@
             // 
             this.btn_babies.BackColor = System.Drawing.Color.White;
             this.btn_babies.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_babies.Location = new System.Drawing.Point(742, 335);
+            this.btn_babies.Location = new System.Drawing.Point(265, 177);
             this.btn_babies.Name = "btn_babies";
-            this.btn_babies.Size = new System.Drawing.Size(293, 220);
+            this.btn_babies.Size = new System.Drawing.Size(217, 48);
             this.btn_babies.TabIndex = 60;
             this.btn_babies.Text = "non-alcoholic";
             this.btn_babies.UseVisualStyleBackColor = false;
@@ -156,12 +131,21 @@
             // 
             this.btn_mixed_drinks.BackColor = System.Drawing.Color.White;
             this.btn_mixed_drinks.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_mixed_drinks.Location = new System.Drawing.Point(742, 102);
+            this.btn_mixed_drinks.Location = new System.Drawing.Point(42, 177);
             this.btn_mixed_drinks.Name = "btn_mixed_drinks";
-            this.btn_mixed_drinks.Size = new System.Drawing.Size(293, 220);
+            this.btn_mixed_drinks.Size = new System.Drawing.Size(217, 48);
             this.btn_mixed_drinks.TabIndex = 61;
             this.btn_mixed_drinks.Text = "Mixed drinks";
             this.btn_mixed_drinks.UseVisualStyleBackColor = false;
+            // 
+            // lbl_ordernum
+            // 
+            this.lbl_ordernum.AutoSize = true;
+            this.lbl_ordernum.Location = new System.Drawing.Point(595, 53);
+            this.lbl_ordernum.Name = "lbl_ordernum";
+            this.lbl_ordernum.Size = new System.Drawing.Size(56, 13);
+            this.lbl_ordernum.TabIndex = 62;
+            this.lbl_ordernum.Text = "Order No: ";
             // 
             // Order
             // 
@@ -169,32 +153,27 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(1084, 730);
+            this.Controls.Add(this.lbl_ordernum);
             this.Controls.Add(this.btn_mixed_drinks);
             this.Controls.Add(this.btn_babies);
             this.Controls.Add(this.btn_specials);
             this.Controls.Add(this.btn_shots);
             this.Controls.Add(this.btn_wine);
             this.Controls.Add(this.btn_beer);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.btn_exit);
-            this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Order";
-            this.Text = "Order";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Text = "-+";
+            this.Load += new System.EventHandler(this.Order_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Button btn_exit;
-        private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_beer;
         private System.Windows.Forms.Button btn_wine;
@@ -202,5 +181,7 @@
         private System.Windows.Forms.Button btn_specials;
         private System.Windows.Forms.Button btn_babies;
         private System.Windows.Forms.Button btn_mixed_drinks;
+        private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.Label lbl_ordernum;
     }
 }
