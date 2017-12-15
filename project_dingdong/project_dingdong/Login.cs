@@ -93,5 +93,32 @@ namespace project_dingdong
         {
 
         }
+
+        private void tb_usern_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                tb_pass.Focus();
+        }
+
+        private void tb_pass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btn_login.PerformClick();
+        }
+
+        private void tb_usern_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                tb_pass.Focus();
+
+
+        }
+
+        private void tb_pass_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btn_login.PerformClick();
+        }
     }
 }
+

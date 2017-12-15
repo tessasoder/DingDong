@@ -52,21 +52,21 @@
             // tb_usern
             // 
             this.tb_usern.Location = new System.Drawing.Point(261, 300);
-            this.tb_usern.Multiline = true;
             this.tb_usern.Name = "tb_usern";
-            this.tb_usern.Size = new System.Drawing.Size(865, 59);
+            this.tb_usern.Size = new System.Drawing.Size(865, 20);
             this.tb_usern.TabIndex = 1;
+            this.tb_usern.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_usern_KeyDown_1);
             // 
             // tb_pass
             // 
             this.tb_pass.AccessibleName = "";
             this.tb_pass.Location = new System.Drawing.Point(261, 392);
-            this.tb_pass.Multiline = true;
             this.tb_pass.Name = "tb_pass";
             this.tb_pass.PasswordChar = '*';
-            this.tb_pass.Size = new System.Drawing.Size(865, 59);
+            this.tb_pass.Size = new System.Drawing.Size(865, 20);
             this.tb_pass.TabIndex = 2;
             this.tb_pass.TextChanged += new System.EventHandler(this.tb_pass_TextChanged);
+            this.tb_pass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_pass_KeyDown_1);
             // 
             // btn_exit
             // 
