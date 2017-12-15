@@ -15,13 +15,18 @@ namespace project_dingdong
     public partial class Login : Form
     {
 
+        //connection string
         public static MySqlConnection con = new MySqlConnection("server=eduweb.kb.local;username=team09;password=T3amO9;database=team09;");
         int i;
         public Login()
         {
             InitializeComponent();
+
+            this.ActiveControl = tb_usern;
+            tb_usern.Focus();
         }
 
+        #region login
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -67,6 +72,12 @@ namespace project_dingdong
                 Console.WriteLine(ex);
             }
         }
+        #endregion
+
+
+        #region usability
+
+        #endregion
 
         private void tb_pass_TextChanged(object sender, EventArgs e)
         {
