@@ -35,8 +35,8 @@
             this.btn_wine = new System.Windows.Forms.Button();
             this.btn_shots = new System.Windows.Forms.Button();
             this.btn_specials = new System.Windows.Forms.Button();
-            this.btn_babies = new System.Windows.Forms.Button();
-            this.btn_mixed_drinks = new System.Windows.Forms.Button();
+            this.btn_non_a = new System.Windows.Forms.Button();
+            this.btn_mixed = new System.Windows.Forms.Button();
             this.lbl_ordernum = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -82,6 +82,7 @@
             this.btn_beer.TabIndex = 56;
             this.btn_beer.Text = "Beer";
             this.btn_beer.UseVisualStyleBackColor = false;
+            this.btn_beer.Click += new System.EventHandler(this.btn_beer_Click);
             // 
             // btn_wine
             // 
@@ -93,6 +94,7 @@
             this.btn_wine.TabIndex = 57;
             this.btn_wine.Text = "Wine";
             this.btn_wine.UseVisualStyleBackColor = false;
+            this.btn_wine.Click += new System.EventHandler(this.btn_wine_Click);
             // 
             // btn_shots
             // 
@@ -116,27 +118,27 @@
             this.btn_specials.Text = "Specials";
             this.btn_specials.UseVisualStyleBackColor = false;
             // 
-            // btn_babies
+            // btn_non_a
             // 
-            this.btn_babies.BackColor = System.Drawing.Color.White;
-            this.btn_babies.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_babies.Location = new System.Drawing.Point(265, 177);
-            this.btn_babies.Name = "btn_babies";
-            this.btn_babies.Size = new System.Drawing.Size(217, 48);
-            this.btn_babies.TabIndex = 60;
-            this.btn_babies.Text = "non-alcoholic";
-            this.btn_babies.UseVisualStyleBackColor = false;
+            this.btn_non_a.BackColor = System.Drawing.Color.White;
+            this.btn_non_a.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_non_a.Location = new System.Drawing.Point(265, 177);
+            this.btn_non_a.Name = "btn_non_a";
+            this.btn_non_a.Size = new System.Drawing.Size(217, 48);
+            this.btn_non_a.TabIndex = 60;
+            this.btn_non_a.Text = "non-alcoholic";
+            this.btn_non_a.UseVisualStyleBackColor = false;
             // 
-            // btn_mixed_drinks
+            // btn_mixed
             // 
-            this.btn_mixed_drinks.BackColor = System.Drawing.Color.White;
-            this.btn_mixed_drinks.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_mixed_drinks.Location = new System.Drawing.Point(42, 177);
-            this.btn_mixed_drinks.Name = "btn_mixed_drinks";
-            this.btn_mixed_drinks.Size = new System.Drawing.Size(217, 48);
-            this.btn_mixed_drinks.TabIndex = 61;
-            this.btn_mixed_drinks.Text = "Mixed drinks";
-            this.btn_mixed_drinks.UseVisualStyleBackColor = false;
+            this.btn_mixed.BackColor = System.Drawing.Color.White;
+            this.btn_mixed.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_mixed.Location = new System.Drawing.Point(42, 177);
+            this.btn_mixed.Name = "btn_mixed";
+            this.btn_mixed.Size = new System.Drawing.Size(217, 48);
+            this.btn_mixed.TabIndex = 61;
+            this.btn_mixed.Text = "Mixed drinks";
+            this.btn_mixed.UseVisualStyleBackColor = false;
             // 
             // lbl_ordernum
             // 
@@ -154,8 +156,8 @@
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(1084, 730);
             this.Controls.Add(this.lbl_ordernum);
-            this.Controls.Add(this.btn_mixed_drinks);
-            this.Controls.Add(this.btn_babies);
+            this.Controls.Add(this.btn_mixed);
+            this.Controls.Add(this.btn_non_a);
             this.Controls.Add(this.btn_specials);
             this.Controls.Add(this.btn_shots);
             this.Controls.Add(this.btn_wine);
@@ -179,8 +181,8 @@
         private System.Windows.Forms.Button btn_wine;
         private System.Windows.Forms.Button btn_shots;
         private System.Windows.Forms.Button btn_specials;
-        private System.Windows.Forms.Button btn_babies;
-        private System.Windows.Forms.Button btn_mixed_drinks;
+        private System.Windows.Forms.Button btn_non_a;
+        private System.Windows.Forms.Button btn_mixed;
         private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Label lbl_ordernum;
     }
