@@ -35,11 +35,6 @@
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.rdb_ding = new System.Windows.Forms.RadioButton();
-            this.label10 = new System.Windows.Forms.Label();
-            this.rdb_dong = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_time = new System.Windows.Forms.TextBox();
             this.Beziehungsstatus = new System.Windows.Forms.Label();
@@ -62,11 +57,13 @@
             this.txt_name = new System.Windows.Forms.TextBox();
             this.btn_search = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.listbox_sort_by = new System.Windows.Forms.ListBox();
             this.btn_go = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
+            this.cb_searchby = new System.Windows.Forms.ComboBox();
+            this.btn_search_daten = new System.Windows.Forms.Button();
+            this.cb_geschlecht = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_exit
@@ -133,65 +130,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(221, 71);
             this.pictureBox1.TabIndex = 49;
             this.pictureBox1.TabStop = false;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.rdb_ding);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.rdb_dong);
-            this.groupBox1.Location = new System.Drawing.Point(847, 288);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 84);
-            this.groupBox1.TabIndex = 95;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(153, 27);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 16);
-            this.label7.TabIndex = 45;
-            this.label7.Text = "Dong";
-            // 
-            // rdb_ding
-            // 
-            this.rdb_ding.AutoSize = true;
-            this.rdb_ding.BackColor = System.Drawing.Color.CadetBlue;
-            this.rdb_ding.ForeColor = System.Drawing.Color.White;
-            this.rdb_ding.Location = new System.Drawing.Point(19, 46);
-            this.rdb_ding.Name = "rdb_ding";
-            this.rdb_ding.Size = new System.Drawing.Size(14, 13);
-            this.rdb_ding.TabIndex = 47;
-            this.rdb_ding.TabStop = true;
-            this.rdb_ding.UseVisualStyleBackColor = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(7, 27);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 16);
-            this.label10.TabIndex = 44;
-            this.label10.Text = "Ding";
-            // 
-            // rdb_dong
-            // 
-            this.rdb_dong.AutoSize = true;
-            this.rdb_dong.BackColor = System.Drawing.Color.CadetBlue;
-            this.rdb_dong.ForeColor = System.Drawing.Color.White;
-            this.rdb_dong.Location = new System.Drawing.Point(166, 46);
-            this.rdb_dong.Name = "rdb_dong";
-            this.rdb_dong.Size = new System.Drawing.Size(14, 13);
-            this.rdb_dong.TabIndex = 46;
-            this.rdb_dong.TabStop = true;
-            this.rdb_dong.UseVisualStyleBackColor = false;
             // 
             // label8
             // 
@@ -380,7 +318,7 @@
             this.btn_search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_search.BackgroundImage")));
             this.btn_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_search.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_search.Location = new System.Drawing.Point(239, 392);
+            this.btn_search.Location = new System.Drawing.Point(104, 390);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(75, 41);
             this.btn_search.TabIndex = 96;
@@ -396,28 +334,6 @@
             this.label2.TabIndex = 97;
             this.label2.Text = "Search by... ";
             // 
-            // listbox_sort_by
-            // 
-            this.listbox_sort_by.AllowDrop = true;
-            this.listbox_sort_by.BackColor = System.Drawing.Color.CadetBlue;
-            this.listbox_sort_by.FormattingEnabled = true;
-            this.listbox_sort_by.Items.AddRange(new object[] {
-            "Name",
-            "Surname",
-            "Person ID",
-            "Date of birth",
-            "Adress",
-            "Location",
-            "Position",
-            "Wage",
-            "Relationshipstatus",
-            "Full-/Parttime",
-            "Gender"});
-            this.listbox_sort_by.Location = new System.Drawing.Point(307, 78);
-            this.listbox_sort_by.Name = "listbox_sort_by";
-            this.listbox_sort_by.Size = new System.Drawing.Size(120, 17);
-            this.listbox_sort_by.TabIndex = 98;
-            // 
             // btn_go
             // 
             this.btn_go.BackColor = System.Drawing.Color.White;
@@ -427,7 +343,7 @@
             this.btn_go.TabIndex = 99;
             this.btn_go.Text = "Go";
             this.btn_go.UseVisualStyleBackColor = false;
-            //this.btn_go.Click += new System.EventHandler(this.btn_go_Click);
+            this.btn_go.Click += new System.EventHandler(this.btn_go_Click);
             // 
             // btn_edit
             // 
@@ -440,18 +356,74 @@
             this.btn_edit.UseVisualStyleBackColor = false;
             this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
+            // cb_searchby
+            // 
+            this.cb_searchby.FormattingEnabled = true;
+            this.cb_searchby.Items.AddRange(new object[] {
+            "Name",
+            "Surname",
+            "Person ID",
+            "Date of birth",
+            "Adress",
+            "Location",
+            "Position",
+            "Wage",
+            "Relationshipstatus",
+            "Full-/Parttime",
+            "Gender"});
+            this.cb_searchby.Location = new System.Drawing.Point(303, 75);
+            this.cb_searchby.Name = "cb_searchby";
+            this.cb_searchby.Size = new System.Drawing.Size(121, 21);
+            this.cb_searchby.TabIndex = 101;
+            this.cb_searchby.SelectedIndexChanged += new System.EventHandler(this.cb_searchby_SelectedIndexChanged);
+            // 
+            // btn_search_daten
+            // 
+            this.btn_search_daten.Location = new System.Drawing.Point(219, 399);
+            this.btn_search_daten.Name = "btn_search_daten";
+            this.btn_search_daten.Size = new System.Drawing.Size(75, 23);
+            this.btn_search_daten.TabIndex = 102;
+            this.btn_search_daten.Text = "button1";
+            this.btn_search_daten.UseVisualStyleBackColor = true;
+            this.btn_search_daten.Click += new System.EventHandler(this.btn_search_daten_Click);
+            // 
+            // cb_geschlecht
+            // 
+            this.cb_geschlecht.FormattingEnabled = true;
+            this.cb_geschlecht.Items.AddRange(new object[] {
+            "Ding",
+            "Dong"});
+            this.cb_geschlecht.Location = new System.Drawing.Point(833, 298);
+            this.cb_geschlecht.Name = "cb_geschlecht";
+            this.cb_geschlecht.Size = new System.Drawing.Size(225, 21);
+            this.cb_geschlecht.TabIndex = 103;
+            
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(844, 278);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 16);
+            this.label9.TabIndex = 104;
+            this.label9.Text = "Gender";
+            // 
             // AdminEditEmp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(1346, 577);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.cb_geschlecht);
+            this.Controls.Add(this.btn_search_daten);
+            this.Controls.Add(this.cb_searchby);
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.btn_go);
-            this.Controls.Add(this.listbox_sort_by);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_search);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txt_time);
             this.Controls.Add(this.Beziehungsstatus);
@@ -483,8 +455,6 @@
             this.Text = "AdminEditEmp";
             this.Load += new System.EventHandler(this.AdminEditEmp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -497,11 +467,6 @@
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RadioButton rdb_ding;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RadioButton rdb_dong;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_time;
         private System.Windows.Forms.Label Beziehungsstatus;
@@ -524,8 +489,11 @@
         private System.Windows.Forms.TextBox txt_name;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox listbox_sort_by;
         private System.Windows.Forms.Button btn_go;
         private System.Windows.Forms.Button btn_edit;
+        private System.Windows.Forms.ComboBox cb_searchby;
+        private System.Windows.Forms.Button btn_search_daten;
+        private System.Windows.Forms.ComboBox cb_geschlecht;
+        private System.Windows.Forms.Label label9;
     }
 }

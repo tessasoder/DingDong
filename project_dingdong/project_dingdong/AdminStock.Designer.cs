@@ -28,13 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminStock));
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_logout = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_save = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.team09DataSet = new project_dingdong.team09DataSet();
+            this.stockBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.stockTableAdapter = new project_dingdong.team09DataSetTableAdapters.StockTableAdapter();
+            this.team09DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.stockBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.team09DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.team09DataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_exit
@@ -69,6 +79,7 @@
             this.label1.Size = new System.Drawing.Size(118, 25);
             this.label1.TabIndex = 9;
             this.label1.Text = "Username";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btn_save
             // 
@@ -90,6 +101,30 @@
             this.pictureBox1.TabIndex = 50;
             this.pictureBox1.TabStop = false;
             // 
+            // team09DataSet
+            // 
+            this.team09DataSet.DataSetName = "team09DataSet";
+            this.team09DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // stockBindingSource
+            // 
+            this.stockBindingSource.DataMember = "Stock";
+            this.stockBindingSource.DataSource = this.team09DataSet;
+            // 
+            // stockTableAdapter
+            // 
+            this.stockTableAdapter.ClearBeforeFill = true;
+            // 
+            // team09DataSetBindingSource
+            // 
+            this.team09DataSetBindingSource.DataSource = this.team09DataSet;
+            this.team09DataSetBindingSource.Position = 0;
+            // 
+            // stockBindingSource1
+            // 
+            this.stockBindingSource1.DataMember = "Stock";
+            this.stockBindingSource1.DataSource = this.team09DataSetBindingSource;
+            // 
             // AdminStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -104,7 +139,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminStock";
             this.Text = "AdminStock";
+            this.Load += new System.EventHandler(this.AdminStock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.team09DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.team09DataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,5 +157,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private team09DataSet team09DataSet;
+        private System.Windows.Forms.BindingSource stockBindingSource;
+        private team09DataSetTableAdapters.StockTableAdapter stockTableAdapter;
+        private System.Windows.Forms.BindingSource team09DataSetBindingSource;
+        private System.Windows.Forms.BindingSource stockBindingSource1;
     }
 }
