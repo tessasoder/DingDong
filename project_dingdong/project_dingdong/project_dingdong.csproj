@@ -82,6 +82,11 @@
     <Compile Include="AdminStock.Designer.cs">
       <DependentUpon>AdminStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="datagrid_set.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>datagrid_set.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EmpStart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +149,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="datagrid_set.xsc">
+      <DependentUpon>datagrid_set.xsd</DependentUpon>
+    </None>
+    <None Include="datagrid_set.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>datagrid_set.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datagrid_set.xss">
+      <DependentUpon>datagrid_set.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

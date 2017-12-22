@@ -33,21 +33,22 @@
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_logout = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_save = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.datagrid_set = new project_dingdong.datagrid_set();
             this.stockBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.team09DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stockBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.stockTableAdapter = new project_dingdong.datagrid_setTableAdapters.StockTableAdapter();
+            this.daten_stock = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagrid_set)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.team09DataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.daten_stock)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_exit
             // 
             this.btn_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_exit.Location = new System.Drawing.Point(1247, 25);
+            this.btn_exit.Location = new System.Drawing.Point(629, 12);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(54, 48);
             this.btn_exit.TabIndex = 11;
@@ -58,7 +59,7 @@
             // btn_logout
             // 
             this.btn_logout.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btn_logout.Location = new System.Drawing.Point(1188, 495);
+            this.btn_logout.Location = new System.Drawing.Point(570, 530);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(113, 35);
             this.btn_logout.TabIndex = 10;
@@ -76,41 +77,59 @@
             this.label1.Size = new System.Drawing.Size(118, 25);
             this.label1.TabIndex = 9;
             this.label1.Text = "Username";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // btn_save
+            // btn_update
             // 
-            this.btn_save.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btn_save.Location = new System.Drawing.Point(1027, 495);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(113, 35);
-            this.btn_save.TabIndex = 12;
-            this.btn_save.Text = "save";
-            this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_update.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_update.Location = new System.Drawing.Point(409, 530);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(113, 35);
+            this.btn_update.TabIndex = 12;
+            this.btn_update.Text = "update";
+            this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 494);
+            this.pictureBox1.Location = new System.Drawing.Point(1, 505);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(221, 71);
             this.pictureBox1.TabIndex = 50;
             this.pictureBox1.TabStop = false;
-         
-            // stockBindingSource1
             // 
-            this.stockBindingSource1.DataMember = "Stock";
-            this.stockBindingSource1.DataSource = this.team09DataSetBindingSource;
+            // datagrid_set
+            // 
+            this.datagrid_set.DataSetName = "datagrid_set";
+            this.datagrid_set.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // stockBindingSource
+            // 
+            this.stockBindingSource.DataMember = "Stock";
+            this.stockBindingSource.DataSource = this.datagrid_set;
+            // 
+            // stockTableAdapter
+            // 
+            this.stockTableAdapter.ClearBeforeFill = true;
+            // 
+            // daten_stock
+            // 
+            this.daten_stock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.daten_stock.Location = new System.Drawing.Point(196, 53);
+            this.daten_stock.Name = "daten_stock";
+            this.daten_stock.Size = new System.Drawing.Size(351, 446);
+            this.daten_stock.TabIndex = 51;
             // 
             // AdminStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(1346, 577);
+            this.ClientSize = new System.Drawing.Size(695, 577);
+            this.Controls.Add(this.daten_stock);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btn_save);
+            this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.label1);
@@ -119,9 +138,9 @@
             this.Text = "AdminStock";
             this.Load += new System.EventHandler(this.AdminStock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagrid_set)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.team09DataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.daten_stock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,10 +151,11 @@
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private datagrid_set datagrid_set;
         private System.Windows.Forms.BindingSource stockBindingSource;
-        private System.Windows.Forms.BindingSource team09DataSetBindingSource;
-        private System.Windows.Forms.BindingSource stockBindingSource1;
+        private datagrid_setTableAdapters.StockTableAdapter stockTableAdapter;
+        private System.Windows.Forms.DataGridView daten_stock;
     }
 }

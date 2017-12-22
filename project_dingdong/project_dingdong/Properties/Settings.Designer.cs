@@ -33,5 +33,16 @@ namespace project_dingdong.Properties {
                 return ((string)(this["team09ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=eduweb.kb.local;user id=team09;password=T3amO9;database=team09;persistsecu" +
+            "rityinfo=True")]
+        public string datagrid_connection {
+            get {
+                return ((string)(this["datagrid_connection"]));
+            }
+        }
     }
 }

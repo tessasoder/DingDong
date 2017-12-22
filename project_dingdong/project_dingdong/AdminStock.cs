@@ -1,7 +1,10 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -33,16 +36,48 @@ namespace project_dingdong
             l.Show();
         }
 
-        private void AdminStock_Load(object sender, EventArgs e)
+        public void AdminStock_Load(object sender, EventArgs e)
         {
-            //TODO: Diese Codezeile lädt Daten in die Tabelle "team09DataSet.Stock". Sie können sie bei Bedarf verschieben oder entfernen.
-            //this.stockTableAdapter.Fill(this.team09DataSet.Stock);
+            try
+            {
+                Login.con.Open();
+                MessageBox.Show("seawas");
+                MySqlCommand command = new MySqlCommand("select * from Stock", Login.con);
+                command.CommandType = CommandType.Text; 
+                DataTable data = new DataTable();
+                MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                adapter.Fill(data);
+                daten_stock.DataSource = data;
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("To run this example, replace the value of the " +
+                    "connectionString variable with a connection string that is " +
+                    "valid for your system.");
+            }
+            finally
+            {
+                Login.con.Close();
+            }
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btn_update_Click(object sender, EventArgs e)
         {
-           //label1.Text =  
+            try
+            {
+                Login.con.Open();
+                MySqlDataAdapter
+                MySqlCommandBuilder cmbl = new MySqlCommandBuilder();
+
+            }
+            catch
+            {
+            }
+            finally
+            {
+                Login.con.Close();
+            }
         }
     }
 }
