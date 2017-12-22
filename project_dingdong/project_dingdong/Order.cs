@@ -14,23 +14,25 @@ namespace project_dingdong
     public partial class Order : Form
     {
 
+        #region stuff
         MySqlCommand genbtns = Login.con.CreateCommand();
+        MySqlCommand getdrink = Login.con.CreateCommand();
         string cat = "";
         int num = 0;
+        string[] cats = { "beer", "wine", "non_a", "shots", "mixed", "special" };
+        
+        //lists
+        List<string> beer = new List<string>();
+        List<string> wine = new List<string>();
+        List<string> non_a = new List<string>();
+        List<string> shots = new List<string>();
+        List<string> mixed = new List<string>();
+        List<string> special = new List<string>();
+        #endregion
+
         public Order()
         {
             InitializeComponent();
-
-            #region generate buttons
-            //generate buttons here and not while runtime
-            String[] cats = new string[] {"beer", "wine", "non_a", "shots","mixed","special" };
-            for(int i = 0; i < cat.Length;i++)
-            {
-                Console.WriteLine(cats[i]);
-            }
-
-            #endregion 
-
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -38,69 +40,99 @@ namespace project_dingdong
             EmpStart emp_start = new EmpStart();
             emp_start.Show();
             this.Hide();
+
         }
 
 
         private void Order_Load(object sender, EventArgs e)
         {
+            try
+            {
+                Login.con.Open();
+                getdrink.CommandText = "SELECT name FROM `Drinks` WHERE category = '" + cat + "'";
+                Console.WriteLine(getdrink.ExecuteScalar());
+                Login.con.Close();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
 
+            #region generate buttons
+            //generate buttons here and not while runtime
+
+
+            //Console.WriteLine(cats.Length);
+
+            //for loop loops for each button category and creats all the buttons
+            for (int i = 0; i < cats.Length; i++)
+            {
+                //Console.WriteLine(cats[i]);
+                Login.con.Open();
+
+                cat = cats[i];
+                //count the number of drinks in the category
+                num = count(cat);
+
+                //create buttons
+                createbtns(cat, num);
+
+                Login.con.Close();
+            }
+            #endregion 
+
+            
         }
-
-
-        #region generate buttons
 
         #region drinkbuttons
         //beer
         private void btn_beer_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Login.con.Open();
-                cat = getcat(sender);
-                Console.WriteLine(cat);
-                
-                delotherbtns();
-                
-                num = count(cat);
+            cat = getcat(sender);
 
-                createbtns(cat, num);
-
-                Login.con.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-                
-            }
+            vsbltyHandler(cat);
 
         }
-
-        
 
         //wine
         private void btn_wine_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Login.con.Open();
-                cat = getcat(sender);
-                Console.WriteLine(cat);
+            cat = getcat(sender);
 
-                delotherbtns();
-
-                num = count(cat);
-
-                createbtns(cat, num);
-
-                Login.con.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-
-            }
+            vsbltyHandler(cat);
         }
 
+        //shots
+        private void btn_shots_Click(object sender, EventArgs e)
+        {
+            cat = getcat(sender);
+
+            vsbltyHandler(cat);
+        }
+
+        //special
+        private void btn_special_Click(object sender, EventArgs e)
+        {
+            cat = getcat(sender);
+
+            vsbltyHandler(cat);
+        }
+
+        //mixed
+        private void btn_mixed_Click(object sender, EventArgs e)
+        {
+            cat = getcat(sender);
+
+            vsbltyHandler(cat);
+        }
+
+        //non_a
+        private void btn_non_a_Click(object sender, EventArgs e)
+        {
+            cat = getcat(sender);
+
+            vsbltyHandler(cat);
+        }
 
         #endregion
 
@@ -120,26 +152,26 @@ namespace project_dingdong
         }
 
 
-        //delete buttons
-        private void delotherbtns()
-        {
-            foreach (Control btn in this.Controls)
-            {
-                if (btn.Name.Contains("$"))
-                {
-                    this.Controls.Remove(btn);
-                    Console.WriteLine("del "+ btn.Name);
-                }
+        ////delete buttons
+        //private void delotherbtns()
+        //{
+        //    foreach (Control btn in this.Controls)
+        //    {
+        //        if (btn.Name.Contains("$"))
+        //        {
+        //            this.Controls.Remove(btn);
+        //            Console.WriteLine("del "+ btn.Name);
+        //        }
                     
-            }
-        }
+        //    }
+        //}
 
         //count objects in category
         private int count(string cat)
         {
             genbtns.CommandText = "select count(name) from Drinks where category='" + cat + "'";
             num = Convert.ToInt32(genbtns.ExecuteScalar());
-            Console.WriteLine(num);
+            //Console.WriteLine(num);
             return num;
         }
 
@@ -149,20 +181,40 @@ namespace project_dingdong
             int top = 400;
             for (int i = 0; i < num; i++)
             {
-                Console.WriteLine(i);
+                
+                //Console.WriteLine(i);
                 Button btn = new Button();
+                
                 btn.Text = cat + "_" + i;
                 btn.Name = "$" + cat + "_" + i;
                 btn.Left = 50;
                 btn.Top = top;
                 this.Controls.Add(btn);
                 top += btn.Height + 2;
-                Console.WriteLine(btn.Name);
+                //Console.WriteLine(btn.Name);
+                btn.Visible = false;
+            }
+        }
+
+        //handle visible buttons
+        private void vsbltyHandler(string cat)
+        {
+            foreach (Control btn in this.Controls)
+            {
+                if (btn.Name.Contains(cat) && btn.Name.Contains("$"))
+                {
+                    btn.Visible = true;
+                }
+                else if(btn.Name.Contains("$"))
+                {
+                    btn.Visible = false;
+                }
+
             }
         }
         #endregion
-        #endregion
 
 
+        
     }
 }

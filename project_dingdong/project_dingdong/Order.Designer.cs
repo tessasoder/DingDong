@@ -34,7 +34,7 @@
             this.btn_beer = new System.Windows.Forms.Button();
             this.btn_wine = new System.Windows.Forms.Button();
             this.btn_shots = new System.Windows.Forms.Button();
-            this.btn_specials = new System.Windows.Forms.Button();
+            this.btn_special = new System.Windows.Forms.Button();
             this.btn_non_a = new System.Windows.Forms.Button();
             this.btn_mixed = new System.Windows.Forms.Button();
             this.lbl_ordernum = new System.Windows.Forms.Label();
@@ -106,17 +106,19 @@
             this.btn_shots.TabIndex = 58;
             this.btn_shots.Text = "Shots";
             this.btn_shots.UseVisualStyleBackColor = false;
+            this.btn_shots.Click += new System.EventHandler(this.btn_shots_Click);
             // 
-            // btn_specials
+            // btn_special
             // 
-            this.btn_specials.BackColor = System.Drawing.Color.White;
-            this.btn_specials.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_specials.Location = new System.Drawing.Point(265, 123);
-            this.btn_specials.Name = "btn_specials";
-            this.btn_specials.Size = new System.Drawing.Size(217, 48);
-            this.btn_specials.TabIndex = 59;
-            this.btn_specials.Text = "Specials";
-            this.btn_specials.UseVisualStyleBackColor = false;
+            this.btn_special.BackColor = System.Drawing.Color.White;
+            this.btn_special.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_special.Location = new System.Drawing.Point(265, 123);
+            this.btn_special.Name = "btn_special";
+            this.btn_special.Size = new System.Drawing.Size(217, 48);
+            this.btn_special.TabIndex = 59;
+            this.btn_special.Text = "Specials";
+            this.btn_special.UseVisualStyleBackColor = false;
+            this.btn_special.Click += new System.EventHandler(this.btn_special_Click);
             // 
             // btn_non_a
             // 
@@ -128,6 +130,7 @@
             this.btn_non_a.TabIndex = 60;
             this.btn_non_a.Text = "non-alcoholic";
             this.btn_non_a.UseVisualStyleBackColor = false;
+            this.btn_non_a.Click += new System.EventHandler(this.btn_non_a_Click);
             // 
             // btn_mixed
             // 
@@ -139,6 +142,7 @@
             this.btn_mixed.TabIndex = 61;
             this.btn_mixed.Text = "Mixed drinks";
             this.btn_mixed.UseVisualStyleBackColor = false;
+            this.btn_mixed.Click += new System.EventHandler(this.btn_mixed_Click);
             // 
             // lbl_ordernum
             // 
@@ -158,7 +162,7 @@
             this.Controls.Add(this.lbl_ordernum);
             this.Controls.Add(this.btn_mixed);
             this.Controls.Add(this.btn_non_a);
-            this.Controls.Add(this.btn_specials);
+            this.Controls.Add(this.btn_special);
             this.Controls.Add(this.btn_shots);
             this.Controls.Add(this.btn_wine);
             this.Controls.Add(this.btn_beer);
@@ -180,7 +184,7 @@
         private System.Windows.Forms.Button btn_beer;
         private System.Windows.Forms.Button btn_wine;
         private System.Windows.Forms.Button btn_shots;
-        private System.Windows.Forms.Button btn_specials;
+        private System.Windows.Forms.Button btn_special;
         private System.Windows.Forms.Button btn_non_a;
         private System.Windows.Forms.Button btn_mixed;
         private System.Windows.Forms.Button btn_save;
