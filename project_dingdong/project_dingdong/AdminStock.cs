@@ -35,8 +35,8 @@ namespace project_dingdong
 
         private void AdminStock_Load(object sender, EventArgs e)
         {
-            // TODO: Diese Codezeile lädt Daten in die Tabelle "team09DataSet.Stock". Sie können sie bei Bedarf verschieben oder entfernen.
-            this.stockTableAdapter.Fill(this.team09DataSet.Stock);
+            //TODO: Diese Codezeile lädt Daten in die Tabelle "team09DataSet.Stock". Sie können sie bei Bedarf verschieben oder entfernen.
+            //this.stockTableAdapter.Fill(this.team09DataSet.Stock);
 
         }
 

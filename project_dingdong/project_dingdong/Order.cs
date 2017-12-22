@@ -22,7 +22,13 @@ namespace project_dingdong
             InitializeComponent();
 
             #region generate buttons
-            //generate buttons here and not while runtime 
+            //generate buttons here and not while runtime
+            String[] cats = new string[] {"beer", "wine", "non_a", "shots","mixed","special" };
+            for(int i = 0; i < cat.Length;i++)
+            {
+                Console.WriteLine(cats[i]);
+            }
+
             #endregion 
 
         }
