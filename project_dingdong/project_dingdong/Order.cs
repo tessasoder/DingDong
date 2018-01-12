@@ -46,6 +46,7 @@ namespace project_dingdong
 
         private void Order_Load(object sender, EventArgs e)
         {
+            //WIP Nu nid fertig
             try
             {
                 Login.con.Open();

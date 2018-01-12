@@ -24,7 +24,7 @@ namespace project_dingdong
 
         private void AdminNewEmp_Load(object sender, EventArgs e)
         {
-            
+            //WIP nu nid fertig
         }
 
         private void btn_exit_Click(object sender, EventArgs e)

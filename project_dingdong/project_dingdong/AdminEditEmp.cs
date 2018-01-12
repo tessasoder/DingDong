@@ -44,6 +44,7 @@ namespace project_dingdong
 
         private void AdminEditEmp_Load(object sender, EventArgs e)
         {
+            //WIP nu nid feritg
             txt_name.Enabled = false;
             txt_surname.Enabled = false;
             txt_persid.Enabled = false;

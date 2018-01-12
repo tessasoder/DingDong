@@ -36,7 +36,7 @@ namespace project_dingdong
 
         private void btn_drinks_Click(object sender, EventArgs e)
         {
-            //Lager form noch anlegen
+            //WIP noch nid verbunden/fertig
 
         }
 

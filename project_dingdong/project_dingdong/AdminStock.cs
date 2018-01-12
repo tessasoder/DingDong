@@ -15,6 +15,9 @@ namespace project_dingdong
 {
     public partial class AdminStock : Form
     {
+        MySqlDataAdapter updaten;
+        DataSet ds;
+
         public AdminStock()
         {
             InitializeComponent();
@@ -41,19 +44,18 @@ namespace project_dingdong
             try
             {
                 Login.con.Open();
-                MessageBox.Show("seawas");
+               // MessageBox.Show("seawas");
                 MySqlCommand command = new MySqlCommand("select * from Stock", Login.con);
                 command.CommandType = CommandType.Text; 
                 DataTable data = new DataTable();
                 MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                ds = new System.Data.DataSet();
                 adapter.Fill(data);
                 daten_stock.DataSource = data;
             }
             catch (SqlException)
             {
-                MessageBox.Show("To run this example, replace the value of the " +
-                    "connectionString variable with a connection string that is " +
-                    "valid for your system.");
+                MessageBox.Show("error");
             }
             finally
             {
@@ -62,13 +64,14 @@ namespace project_dingdong
 
         }
 
-        private void btn_update_Click(object sender, EventArgs e)
+        private void btn_update_Click(object sender, EventArgs e) //WIP nid fix ob fertig zum ändern
         {
             try
             {
                 Login.con.Open();
-                MySqlDataAdapter
-                MySqlCommandBuilder cmbl = new MySqlCommandBuilder();
+               
+                MySqlCommandBuilder cmbl = new MySqlCommandBuilder(updaten);
+                updaten.Update(ds, "Stock");               
 
             }
             catch
