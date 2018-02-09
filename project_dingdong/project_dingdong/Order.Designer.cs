@@ -38,6 +38,8 @@
             this.btn_non_a = new System.Windows.Forms.Button();
             this.btn_mixed = new System.Windows.Forms.Button();
             this.lbl_ordernum = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_total = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_save
@@ -49,6 +51,7 @@
             this.btn_save.TabIndex = 54;
             this.btn_save.Text = "bill";
             this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // btn_exit
             // 
@@ -153,12 +156,32 @@
             this.lbl_ordernum.TabIndex = 62;
             this.lbl_ordernum.Text = "Order No: ";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(896, 638);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.TabIndex = 63;
+            this.label2.Text = "Total:";
+            // 
+            // lbl_total
+            // 
+            this.lbl_total.AutoSize = true;
+            this.lbl_total.Location = new System.Drawing.Point(937, 638);
+            this.lbl_total.Name = "lbl_total";
+            this.lbl_total.Size = new System.Drawing.Size(13, 13);
+            this.lbl_total.TabIndex = 64;
+            this.lbl_total.Text = "0";
+            // 
             // Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(1084, 730);
+            this.Controls.Add(this.lbl_total);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_ordernum);
             this.Controls.Add(this.btn_mixed);
             this.Controls.Add(this.btn_non_a);
@@ -189,5 +212,7 @@
         private System.Windows.Forms.Button btn_mixed;
         private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Label lbl_ordernum;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_total;
     }
 }
