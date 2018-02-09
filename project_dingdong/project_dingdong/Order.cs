@@ -20,7 +20,7 @@ namespace project_dingdong
         string cat = "";
         int num = 0;
         string[] cats = { "beer", "wine", "non_a", "shots", "mixed", "special" };
-        
+
         //lists
         List<string> beer = new List<string>();
         List<string> wine = new List<string>();
@@ -46,15 +46,34 @@ namespace project_dingdong
 
         private void Order_Load(object sender, EventArgs e)
         {
+
             //WIP Nu nid fertig
+            //loadLists(cats);
             try
             {
                 Login.con.Open();
-                getdrink.CommandText = "SELECT name FROM `Drinks` WHERE category = '" + cat + "'";
-                Console.WriteLine(getdrink.ExecuteScalar());
+                Console.WriteLine("loadlist");
+                
+                
+
+
+                for (int i = 0; i < cats.Length; i++)
+                {
+                    //Console.WriteLine(cats[i]);
+
+                    cat = cats[i];
+                    //count the number of drinks in the category
+                    num = count(cat);
+
+                    //create buttons
+                    createbtns(cat, num);
+
+                }
+
+
                 Login.con.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex);
             }
@@ -66,24 +85,13 @@ namespace project_dingdong
             //Console.WriteLine(cats.Length);
 
             //for loop loops for each button category and creats all the buttons
-            for (int i = 0; i < cats.Length; i++)
-            {
-                //Console.WriteLine(cats[i]);
-                Login.con.Open();
-
-                cat = cats[i];
-                //count the number of drinks in the category
-                num = count(cat);
-
-                //create buttons
-                createbtns(cat, num);
-
-                Login.con.Close();
-            }
+            
             #endregion 
 
             
         }
+
+        
 
         #region drinkbuttons
         //beer
@@ -179,23 +187,54 @@ namespace project_dingdong
         //create buttons for category
         private void createbtns(string cat, int num)
         {
+
+
+            Console.WriteLine("\nCategory: "+ cat);
+            
+            getdrink.CommandText = "SELECT * FROM `Drinks` WHERE category = '" + cat + "'";
+
+            MySqlDataReader reader = getdrink.ExecuteReader();
+            DataTable table = reader.GetSchemaTable();
+
+           while (reader.Read())
+           {
+                
+                Console.WriteLine("{0}\n{1}", reader.GetString(0),reader.GetDecimal(1));
+
+            }
+           reader.Close();
+
+
+
+
+
+
+
             int top = 400;
             for (int i = 0; i < num; i++)
             {
-                
+
                 //Console.WriteLine(i);
                 Button btn = new Button();
-                
-                btn.Text = cat + "_" + i;
+
+                btn.Text = cat;
                 btn.Name = "$" + cat + "_" + i;
                 btn.Left = 50;
                 btn.Top = top;
-                this.Controls.Add(btn);
+                btn.Click += (s, e) =>
+                {  //delgation
+                    MessageBox.Show(btn.Name);
+
+                };
+
                 top += btn.Height + 2;
                 //Console.WriteLine(btn.Name);
                 btn.Visible = false;
+
+                this.Controls.Add(btn);
+
             }
-        }
+    }
 
         //handle visible buttons
         private void vsbltyHandler(string cat)
@@ -213,9 +252,14 @@ namespace project_dingdong
 
             }
         }
+
+        private void loadLists(string[] cats)
+        {
+            
+        }
         #endregion
 
 
-        
+
     }
 }
