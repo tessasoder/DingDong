@@ -36,7 +36,9 @@ namespace project_dingdong
 
         private void btn_drinks_Click(object sender, EventArgs e)
         {
-            //WIP noch nid verbunden/fertig
+            AdminDrink admin_drinks = new AdminDrink();
+            admin_drinks.Show();
+            this.Hide();
 
         }
 

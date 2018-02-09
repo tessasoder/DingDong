@@ -51,5 +51,12 @@ namespace project_dingdong
             this.Hide();
             l.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AdminShowEmp admin_show = new AdminShowEmp();
+            admin_show.Show();
+            this.Hide();
+        }
     }
 }

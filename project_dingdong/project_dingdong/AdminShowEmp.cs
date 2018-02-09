@@ -12,32 +12,16 @@ using System.Windows.Forms;
 
 namespace project_dingdong
 {
-    public partial class EmpStock : Form
+    public partial class AdminShowEmp : Form
     {
-        DataSet ds;
-
-        public EmpStock()
+        public AdminShowEmp()
         {
             InitializeComponent();
         }
 
-        private void btn_exit_Click(object sender, EventArgs e)
-        {
-            EmpStart emp_start = new EmpStart();
-            emp_start.Show();
-            this.Hide();
-        }
+        DataSet ds;
 
-        private void btn_logout_Click(object sender, EventArgs e)
-        {
-            Login l = new Login();
-            Console.Clear();
-            Console.WriteLine("logged out");
-            this.Hide();
-            l.Show();
-        }
-
-        private void EmpStock_Load(object sender, EventArgs e)
+        private void AdminShowEmp_Load(object sender, EventArgs e)
         {
             try
             {
@@ -58,13 +42,29 @@ namespace project_dingdong
 
         private void Datengrid_laden()
         {
-            MySqlCommand command = new MySqlCommand("select * from Stock", Login.con);
+            MySqlCommand command = new MySqlCommand("select * from Emp", Login.con);
             command.CommandType = CommandType.Text;
             DataTable data = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter(command);
             ds = new System.Data.DataSet();
             adapter.Fill(data);
             daten_stock.DataSource = data;
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            EmpStart emp_start = new EmpStart();
+            emp_start.Show();
+            this.Hide();
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            Login l = new Login();
+            Console.Clear();
+            Console.WriteLine("logged out");
+            this.Hide();
+            l.Show();
         }
     }
 }

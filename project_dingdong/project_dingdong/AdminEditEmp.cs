@@ -25,11 +25,6 @@ namespace project_dingdong
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_search_Click(object sender, EventArgs e)
         {
 
@@ -44,6 +39,11 @@ namespace project_dingdong
 
         private void AdminEditEmp_Load(object sender, EventArgs e)
         {
+            btn_empty.Visible = false;
+            lbl_searchby.Visible = false;
+            cb_searchby.Visible = false;
+            btn_go.Visible = false;
+
             //WIP nu nid feritg
             txt_name.Enabled = false;
             txt_surname.Enabled = false;
@@ -64,20 +64,7 @@ namespace project_dingdong
 
         private void btn_edit_Click(object sender, EventArgs e)
         {
-            btn_delete.Hide();
-            btn_edit.Hide();
-
-            txt_name.Enabled = true;
-            txt_surname.Enabled = true;
-            txt_persid.Enabled = true;
-            txt_birthday.Enabled = true;
-            txt_location.Enabled = true;
-            txt_adress.Enabled = true;
-            txt_position.Enabled = true;
-            txt_wage.Enabled = true;
-            txt_time.Enabled = true;
-            txt_status.Enabled = true;
-            cb_geschlecht.Enabled = true;
+            
         }
 
         private void btn_save_Click(object sender, EventArgs e)
@@ -174,7 +161,6 @@ namespace project_dingdong
 
         private void Dateneinfügen(string feld, string wert)
         {
-
 
             //In de einzelnen Felder einfügen       
              
@@ -315,10 +301,136 @@ namespace project_dingdong
         }
 
         private void btn_search_daten_Click(object sender, EventArgs e)
-        {                                 
-                Dateneinfügen(feld, wert);
+        {
+            btn_empty.Visible = true; 
+            Dateneinfügen(feld, wert);
          }
 
-        
+        #region checked changed
+
+        private void rdb_new_CheckedChanged(object sender, EventArgs e)
+        {
+            Felder_leeren();
+            btn_empty.Visible = true;
+            lbl_searchby.Visible = false;
+            cb_searchby.Visible = false;
+            btn_go.Visible = false;
+            lbl_persid.Visible = false;
+            txt_persid.Visible = false;
+            btn_search.Visible = false;
+
+            btn_search.Enabled = true;
+            txt_name.Enabled = true;
+            txt_surname.Enabled = true;
+            txt_persid.Enabled = true;
+            txt_birthday.Enabled = true;
+            txt_location.Enabled = true;
+            txt_adress.Enabled = true;
+            txt_position.Enabled = true;
+            txt_wage.Enabled = true;
+            txt_time.Enabled = true;
+            txt_status.Enabled = true;
+            cb_geschlecht.Enabled = true;
+
+        }
+
+        private void rdb_edit_CheckedChanged(object sender, EventArgs e)
+        {
+            Felder_leeren();
+
+            lbl_searchby.Visible = true;
+            cb_searchby.Visible = true;
+            btn_go.Visible = true;
+            lbl_persid.Visible = true;
+            txt_persid.Visible = true;
+
+            btn_delete.Hide();
+            btn_edit.Hide();
+
+            btn_search.Enabled = true; 
+            txt_name.Enabled = true;
+            txt_surname.Enabled = true;
+            txt_persid.Enabled = true;
+            txt_birthday.Enabled = true;
+            txt_location.Enabled = true;
+            txt_adress.Enabled = true;
+            txt_position.Enabled = true;
+            txt_wage.Enabled = true;
+            txt_time.Enabled = true;
+            txt_status.Enabled = true;
+            cb_geschlecht.Enabled = true;
+        }
+
+        private void rdb_delete_CheckedChanged(object sender, EventArgs e)
+        {
+            Felder_leeren();
+
+            lbl_searchby.Visible = true;
+            cb_searchby.Visible = true;
+            btn_go.Visible = true;
+            lbl_persid.Visible = true;
+            txt_persid.Visible = true;
+
+            btn_delete.Hide();
+            btn_edit.Hide();
+
+            btn_search.Enabled = true;
+            txt_name.Enabled = true;
+            txt_surname.Enabled = true;
+            txt_persid.Enabled = true;
+            txt_birthday.Enabled = true;
+            txt_location.Enabled = true;
+            txt_adress.Enabled = true;
+            txt_position.Enabled = true;
+            txt_wage.Enabled = true;
+            txt_time.Enabled = true;
+            txt_status.Enabled = true;
+            cb_geschlecht.Enabled = true;
+
+        }
+
+
+        #endregion
+
+        private void btn_empty_Click(object sender, EventArgs e)
+        {
+            Felder_leeren();
+        }
+
+        private void Felder_leeren()
+        {
+            txt_name.Text = "";
+            txt_surname.Text = "";
+            txt_persid.Text = "";
+            txt_birthday.Text = "";
+            txt_location.Text = "";
+            txt_adress.Text = "";
+            txt_position.Text = "";
+            txt_wage.Text = "";
+            txt_time.Text = "";
+            txt_status.Text = "";
+            cb_geschlecht.Text = "";
+        }
+
+        private void btn_save_Click_1(object sender, EventArgs e)
+        {
+            if(rdb_new.Checked)
+            {
+                //MySqlCommand new_emp = new MySqlCommand("insert into EMP(name, surname, birthday, address, location, position, wage, relationship, employment, dingdong, username, password) values ("+txt_name.Text+","+txt_surname.Text + ", "+txt_birthday.Text + ", "+txt_adress.Text + ", "+txt_location.Text + ", "+txt_position.Text + ", "+txt_wage.Text+", "+txt_status.Text+", "+txt_time.Text+", "+cb_geschlecht.Text+", ")"
+            }
+            else if(rdb_edit.Checked)
+            {
+
+            }
+            else if(rdb_delete.Checked)
+            {
+
+            }
+            else
+            {
+                Console.WriteLine("You didnt check anything");
+            }
+        }
     }
+  
 }

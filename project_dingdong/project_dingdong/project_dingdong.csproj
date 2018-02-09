@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminDrink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDrink.Designer.cs">
+      <DependentUpon>AdminDrink.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminEditEmp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     </Compile>
     <Compile Include="AdminNewEmp.Designer.cs">
       <DependentUpon>AdminNewEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminShowEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminShowEmp.Designer.cs">
+      <DependentUpon>AdminShowEmp.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminStart.cs">
       <SubType>Form</SubType>
@@ -113,6 +125,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminDrink.resx">
+      <DependentUpon>AdminDrink.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminEditEmp.resx">
       <DependentUpon>AdminEditEmp.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminNewEmp.resx">
       <DependentUpon>AdminNewEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminShowEmp.resx">
+      <DependentUpon>AdminShowEmp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminStart.resx">
       <DependentUpon>AdminStart.cs</DependentUpon>

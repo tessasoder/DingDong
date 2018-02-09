@@ -32,8 +32,6 @@
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_logout = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_delete = new System.Windows.Forms.Button();
-            this.btn_save = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_time = new System.Windows.Forms.TextBox();
@@ -55,21 +53,30 @@
             this.txt_surname = new System.Windows.Forms.TextBox();
             this.lbl_name = new System.Windows.Forms.Label();
             this.txt_name = new System.Windows.Forms.TextBox();
-            this.btn_search = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_searchby = new System.Windows.Forms.Label();
             this.btn_go = new System.Windows.Forms.Button();
-            this.btn_edit = new System.Windows.Forms.Button();
             this.cb_searchby = new System.Windows.Forms.ComboBox();
-            this.btn_search_daten = new System.Windows.Forms.Button();
+            this.btn_search = new System.Windows.Forms.Button();
             this.cb_geschlecht = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.rdb_delete = new System.Windows.Forms.RadioButton();
+            this.rdb_edit = new System.Windows.Forms.RadioButton();
+            this.rdb_new = new System.Windows.Forms.RadioButton();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.btn_edit = new System.Windows.Forms.Button();
+            this.btn_empty = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_exit
             // 
             this.btn_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_exit.Location = new System.Drawing.Point(1237, 13);
+            this.btn_exit.Location = new System.Drawing.Point(1014, 13);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(54, 48);
             this.btn_exit.TabIndex = 15;
@@ -80,7 +87,7 @@
             // btn_logout
             // 
             this.btn_logout.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btn_logout.Location = new System.Drawing.Point(1178, 509);
+            this.btn_logout.Location = new System.Drawing.Point(826, 508);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(113, 35);
             this.btn_logout.TabIndex = 14;
@@ -99,27 +106,6 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Username";
             // 
-            // btn_delete
-            // 
-            this.btn_delete.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btn_delete.Location = new System.Drawing.Point(847, 509);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(113, 35);
-            this.btn_delete.TabIndex = 17;
-            this.btn_delete.Text = "delete";
-            this.btn_delete.UseVisualStyleBackColor = false;
-            // 
-            // btn_save
-            // 
-            this.btn_save.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btn_save.Location = new System.Drawing.Point(990, 509);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(113, 35);
-            this.btn_save.TabIndex = 18;
-            this.btn_save.Text = "save";
-            this.btn_save.UseVisualStyleBackColor = false;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
@@ -136,7 +122,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(844, 223);
+            this.label8.Location = new System.Drawing.Point(418, 162);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(92, 16);
             this.label8.TabIndex = 94;
@@ -144,7 +130,7 @@
             // 
             // txt_time
             // 
-            this.txt_time.Location = new System.Drawing.Point(833, 242);
+            this.txt_time.Location = new System.Drawing.Point(407, 181);
             this.txt_time.Name = "txt_time";
             this.txt_time.Size = new System.Drawing.Size(225, 20);
             this.txt_time.TabIndex = 93;
@@ -154,7 +140,7 @@
             this.Beziehungsstatus.AutoSize = true;
             this.Beziehungsstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Beziehungsstatus.ForeColor = System.Drawing.Color.White;
-            this.Beziehungsstatus.Location = new System.Drawing.Point(844, 162);
+            this.Beziehungsstatus.Location = new System.Drawing.Point(100, 384);
             this.Beziehungsstatus.Name = "Beziehungsstatus";
             this.Beziehungsstatus.Size = new System.Drawing.Size(118, 16);
             this.Beziehungsstatus.TabIndex = 92;
@@ -162,7 +148,7 @@
             // 
             // txt_status
             // 
-            this.txt_status.Location = new System.Drawing.Point(833, 181);
+            this.txt_status.Location = new System.Drawing.Point(89, 403);
             this.txt_status.Name = "txt_status";
             this.txt_status.Size = new System.Drawing.Size(225, 20);
             this.txt_status.TabIndex = 91;
@@ -172,7 +158,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(489, 333);
+            this.label3.Location = new System.Drawing.Point(418, 388);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 16);
             this.label3.TabIndex = 90;
@@ -180,7 +166,7 @@
             // 
             // txt_wage
             // 
-            this.txt_wage.Location = new System.Drawing.Point(478, 352);
+            this.txt_wage.Location = new System.Drawing.Point(407, 407);
             this.txt_wage.Name = "txt_wage";
             this.txt_wage.Size = new System.Drawing.Size(225, 20);
             this.txt_wage.TabIndex = 89;
@@ -190,7 +176,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(489, 278);
+            this.label4.Location = new System.Drawing.Point(418, 333);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 16);
             this.label4.TabIndex = 88;
@@ -198,7 +184,7 @@
             // 
             // txt_position
             // 
-            this.txt_position.Location = new System.Drawing.Point(478, 297);
+            this.txt_position.Location = new System.Drawing.Point(407, 352);
             this.txt_position.Name = "txt_position";
             this.txt_position.Size = new System.Drawing.Size(225, 20);
             this.txt_position.TabIndex = 87;
@@ -208,7 +194,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(489, 217);
+            this.label5.Location = new System.Drawing.Point(418, 272);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 16);
             this.label5.TabIndex = 86;
@@ -216,7 +202,7 @@
             // 
             // txt_location
             // 
-            this.txt_location.Location = new System.Drawing.Point(478, 236);
+            this.txt_location.Location = new System.Drawing.Point(407, 291);
             this.txt_location.Name = "txt_location";
             this.txt_location.Size = new System.Drawing.Size(225, 20);
             this.txt_location.TabIndex = 85;
@@ -226,7 +212,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(489, 162);
+            this.label6.Location = new System.Drawing.Point(418, 217);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(59, 16);
             this.label6.TabIndex = 84;
@@ -234,7 +220,7 @@
             // 
             // txt_adress
             // 
-            this.txt_adress.Location = new System.Drawing.Point(478, 181);
+            this.txt_adress.Location = new System.Drawing.Point(407, 236);
             this.txt_adress.Name = "txt_adress";
             this.txt_adress.Size = new System.Drawing.Size(225, 20);
             this.txt_adress.TabIndex = 83;
@@ -256,14 +242,13 @@
             this.txt_birthday.Name = "txt_birthday";
             this.txt_birthday.Size = new System.Drawing.Size(225, 20);
             this.txt_birthday.TabIndex = 81;
-            this.txt_birthday.EnabledChanged += new System.EventHandler(this.txt_birthday_EnabledChanged);
             // 
             // lbl_persid
             // 
             this.lbl_persid.AutoSize = true;
             this.lbl_persid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_persid.ForeColor = System.Drawing.Color.White;
-            this.lbl_persid.Location = new System.Drawing.Point(100, 278);
+            this.lbl_persid.Location = new System.Drawing.Point(100, 162);
             this.lbl_persid.Name = "lbl_persid";
             this.lbl_persid.Size = new System.Drawing.Size(67, 16);
             this.lbl_persid.TabIndex = 80;
@@ -271,7 +256,8 @@
             // 
             // txt_persid
             // 
-            this.txt_persid.Location = new System.Drawing.Point(89, 297);
+            this.txt_persid.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txt_persid.Location = new System.Drawing.Point(89, 181);
             this.txt_persid.Name = "txt_persid";
             this.txt_persid.Size = new System.Drawing.Size(225, 20);
             this.txt_persid.TabIndex = 79;
@@ -299,7 +285,7 @@
             this.lbl_name.AutoSize = true;
             this.lbl_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_name.ForeColor = System.Drawing.Color.White;
-            this.lbl_name.Location = new System.Drawing.Point(100, 162);
+            this.lbl_name.Location = new System.Drawing.Point(100, 278);
             this.lbl_name.Name = "lbl_name";
             this.lbl_name.Size = new System.Drawing.Size(45, 16);
             this.lbl_name.TabIndex = 76;
@@ -307,54 +293,30 @@
             // 
             // txt_name
             // 
-            this.txt_name.Location = new System.Drawing.Point(89, 181);
+            this.txt_name.Location = new System.Drawing.Point(89, 297);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(225, 20);
             this.txt_name.TabIndex = 75;
             // 
-            // btn_search
+            // lbl_searchby
             // 
-            this.btn_search.BackColor = System.Drawing.Color.Transparent;
-            this.btn_search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_search.BackgroundImage")));
-            this.btn_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_search.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_search.Location = new System.Drawing.Point(104, 390);
-            this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(75, 41);
-            this.btn_search.TabIndex = 96;
-            this.btn_search.UseVisualStyleBackColor = false;
-            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(216, 78);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 13);
-            this.label2.TabIndex = 97;
-            this.label2.Text = "Search by... ";
+            this.lbl_searchby.AutoSize = true;
+            this.lbl_searchby.Location = new System.Drawing.Point(366, 78);
+            this.lbl_searchby.Name = "lbl_searchby";
+            this.lbl_searchby.Size = new System.Drawing.Size(67, 13);
+            this.lbl_searchby.TabIndex = 97;
+            this.lbl_searchby.Text = "Search by... ";
             // 
             // btn_go
             // 
             this.btn_go.BackColor = System.Drawing.Color.White;
-            this.btn_go.Location = new System.Drawing.Point(478, 78);
+            this.btn_go.Location = new System.Drawing.Point(628, 78);
             this.btn_go.Name = "btn_go";
             this.btn_go.Size = new System.Drawing.Size(75, 23);
             this.btn_go.TabIndex = 99;
             this.btn_go.Text = "Go";
             this.btn_go.UseVisualStyleBackColor = false;
             this.btn_go.Click += new System.EventHandler(this.btn_go_Click);
-            // 
-            // btn_edit
-            // 
-            this.btn_edit.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btn_edit.Location = new System.Drawing.Point(990, 509);
-            this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Size = new System.Drawing.Size(113, 35);
-            this.btn_edit.TabIndex = 100;
-            this.btn_edit.Text = "edit";
-            this.btn_edit.UseVisualStyleBackColor = false;
-            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // cb_searchby
             // 
@@ -371,21 +333,21 @@
             "Relationshipstatus",
             "Full-/Parttime",
             "Gender"});
-            this.cb_searchby.Location = new System.Drawing.Point(303, 75);
+            this.cb_searchby.Location = new System.Drawing.Point(453, 75);
             this.cb_searchby.Name = "cb_searchby";
             this.cb_searchby.Size = new System.Drawing.Size(121, 21);
             this.cb_searchby.TabIndex = 101;
-            this.cb_searchby.SelectedIndexChanged += new System.EventHandler(this.cb_searchby_SelectedIndexChanged);
             // 
-            // btn_search_daten
+            // btn_search
             // 
-            this.btn_search_daten.Location = new System.Drawing.Point(219, 399);
-            this.btn_search_daten.Name = "btn_search_daten";
-            this.btn_search_daten.Size = new System.Drawing.Size(75, 23);
-            this.btn_search_daten.TabIndex = 102;
-            this.btn_search_daten.Text = "button1";
-            this.btn_search_daten.UseVisualStyleBackColor = true;
-            this.btn_search_daten.Click += new System.EventHandler(this.btn_search_daten_Click);
+            this.btn_search.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_search.Location = new System.Drawing.Point(789, 405);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(75, 23);
+            this.btn_search.TabIndex = 102;
+            this.btn_search.Text = "Search";
+            this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_daten_Click);
             // 
             // cb_geschlecht
             // 
@@ -393,37 +355,157 @@
             this.cb_geschlecht.Items.AddRange(new object[] {
             "Ding",
             "Dong"});
-            this.cb_geschlecht.Location = new System.Drawing.Point(833, 298);
+            this.cb_geschlecht.Location = new System.Drawing.Point(714, 182);
             this.cb_geschlecht.Name = "cb_geschlecht";
             this.cb_geschlecht.Size = new System.Drawing.Size(225, 21);
             this.cb_geschlecht.TabIndex = 103;
-            
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(844, 278);
+            this.label9.Location = new System.Drawing.Point(725, 162);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 16);
             this.label9.TabIndex = 104;
             this.label9.Text = "Gender";
+            // 
+            // rdb_delete
+            // 
+            this.rdb_delete.AutoSize = true;
+            this.rdb_delete.Location = new System.Drawing.Point(238, 78);
+            this.rdb_delete.Name = "rdb_delete";
+            this.rdb_delete.Size = new System.Drawing.Size(56, 17);
+            this.rdb_delete.TabIndex = 107;
+            this.rdb_delete.TabStop = true;
+            this.rdb_delete.Text = "Delete";
+            this.rdb_delete.UseVisualStyleBackColor = true;
+            this.rdb_delete.CheckedChanged += new System.EventHandler(this.rdb_delete_CheckedChanged);
+            // 
+            // rdb_edit
+            // 
+            this.rdb_edit.AutoSize = true;
+            this.rdb_edit.Location = new System.Drawing.Point(164, 78);
+            this.rdb_edit.Name = "rdb_edit";
+            this.rdb_edit.Size = new System.Drawing.Size(43, 17);
+            this.rdb_edit.TabIndex = 106;
+            this.rdb_edit.TabStop = true;
+            this.rdb_edit.Text = "Edit";
+            this.rdb_edit.UseVisualStyleBackColor = true;
+            this.rdb_edit.CheckedChanged += new System.EventHandler(this.rdb_edit_CheckedChanged);
+            // 
+            // rdb_new
+            // 
+            this.rdb_new.AutoSize = true;
+            this.rdb_new.Location = new System.Drawing.Point(86, 78);
+            this.rdb_new.Name = "rdb_new";
+            this.rdb_new.Size = new System.Drawing.Size(47, 17);
+            this.rdb_new.TabIndex = 105;
+            this.rdb_new.TabStop = true;
+            this.rdb_new.Text = "New";
+            this.rdb_new.UseVisualStyleBackColor = true;
+            this.rdb_new.CheckedChanged += new System.EventHandler(this.rdb_new_CheckedChanged);
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_delete.Location = new System.Drawing.Point(495, 508);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(113, 35);
+            this.btn_delete.TabIndex = 17;
+            this.btn_delete.Text = "delete";
+            this.btn_delete.UseVisualStyleBackColor = false;
+            // 
+            // btn_save
+            // 
+            this.btn_save.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_save.Location = new System.Drawing.Point(638, 508);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(113, 35);
+            this.btn_save.TabIndex = 18;
+            this.btn_save.Text = "save";
+            this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click_1);
+            // 
+            // btn_edit
+            // 
+            this.btn_edit.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_edit.Location = new System.Drawing.Point(638, 508);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(113, 35);
+            this.btn_edit.TabIndex = 100;
+            this.btn_edit.Text = "edit";
+            this.btn_edit.UseVisualStyleBackColor = false;
+            // 
+            // btn_empty
+            // 
+            this.btn_empty.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_empty.Location = new System.Drawing.Point(767, 333);
+            this.btn_empty.Name = "btn_empty";
+            this.btn_empty.Size = new System.Drawing.Size(113, 35);
+            this.btn_empty.TabIndex = 108;
+            this.btn_empty.Text = "Empty all textboxes?";
+            this.btn_empty.UseVisualStyleBackColor = false;
+            this.btn_empty.Click += new System.EventHandler(this.btn_empty_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(725, 217);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 16);
+            this.label2.TabIndex = 112;
+            this.label2.Text = "Full- / Parttime";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(714, 236);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(225, 20);
+            this.textBox1.TabIndex = 111;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(725, 272);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 16);
+            this.label7.TabIndex = 110;
+            this.label7.Text = "Address";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(714, 291);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(225, 20);
+            this.textBox2.TabIndex = 109;
             // 
             // AdminEditEmp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(1346, 577);
+            this.ClientSize = new System.Drawing.Size(1096, 577);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btn_empty);
+            this.Controls.Add(this.rdb_delete);
+            this.Controls.Add(this.rdb_edit);
+            this.Controls.Add(this.rdb_new);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.cb_geschlecht);
-            this.Controls.Add(this.btn_search_daten);
+            this.Controls.Add(this.btn_search);
             this.Controls.Add(this.cb_searchby);
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.btn_go);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btn_search);
+            this.Controls.Add(this.lbl_searchby);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txt_time);
             this.Controls.Add(this.Beziehungsstatus);
@@ -464,8 +546,6 @@
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_delete;
-        private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_time;
@@ -487,13 +567,22 @@
         private System.Windows.Forms.TextBox txt_surname;
         private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.TextBox txt_name;
-        private System.Windows.Forms.Button btn_search;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_searchby;
         private System.Windows.Forms.Button btn_go;
-        private System.Windows.Forms.Button btn_edit;
         private System.Windows.Forms.ComboBox cb_searchby;
-        private System.Windows.Forms.Button btn_search_daten;
+        private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.ComboBox cb_geschlecht;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.RadioButton rdb_delete;
+        private System.Windows.Forms.RadioButton rdb_edit;
+        private System.Windows.Forms.RadioButton rdb_new;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.Button btn_edit;
+        private System.Windows.Forms.Button btn_empty;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

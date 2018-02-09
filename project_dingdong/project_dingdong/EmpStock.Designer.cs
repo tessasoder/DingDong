@@ -33,7 +33,9 @@
             this.btn_logout = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.daten_stock = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.daten_stock)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -41,7 +43,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(101, 41);
+            this.label1.Location = new System.Drawing.Point(55, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 25);
             this.label1.TabIndex = 6;
@@ -50,7 +52,7 @@
             // btn_logout
             // 
             this.btn_logout.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btn_logout.Location = new System.Drawing.Point(1175, 494);
+            this.btn_logout.Location = new System.Drawing.Point(300, 510);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(113, 35);
             this.btn_logout.TabIndex = 7;
@@ -61,7 +63,7 @@
             // btn_exit
             // 
             this.btn_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_exit.Location = new System.Drawing.Point(1234, 41);
+            this.btn_exit.Location = new System.Drawing.Point(359, 12);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(54, 48);
             this.btn_exit.TabIndex = 8;
@@ -79,11 +81,21 @@
             this.pictureBox1.TabIndex = 50;
             this.pictureBox1.TabStop = false;
             // 
+            // daten_stock
+            // 
+            this.daten_stock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.daten_stock.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.daten_stock.Location = new System.Drawing.Point(44, 69);
+            this.daten_stock.Name = "daten_stock";
+            this.daten_stock.Size = new System.Drawing.Size(369, 419);
+            this.daten_stock.TabIndex = 52;
+            // 
             // EmpStock
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(1346, 577);
+            this.ClientSize = new System.Drawing.Size(453, 577);
+            this.Controls.Add(this.daten_stock);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_logout);
@@ -91,7 +103,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EmpStock";
             this.Text = "EmpStock";
+            this.Load += new System.EventHandler(this.EmpStock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.daten_stock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,5 +117,6 @@
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView daten_stock;
     }
 }

@@ -35,13 +35,14 @@
             this.btn_edit_delete = new System.Windows.Forms.Button();
             this.btn_new = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_exit
             // 
             this.btn_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_exit.Location = new System.Drawing.Point(1228, 12);
+            this.btn_exit.Location = new System.Drawing.Point(1010, 28);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(54, 48);
             this.btn_exit.TabIndex = 11;
@@ -52,7 +53,7 @@
             // btn_logout
             // 
             this.btn_logout.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btn_logout.Location = new System.Drawing.Point(1169, 514);
+            this.btn_logout.Location = new System.Drawing.Point(951, 530);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(113, 35);
             this.btn_logout.TabIndex = 10;
@@ -75,7 +76,7 @@
             // 
             this.btn_edit_delete.BackColor = System.Drawing.Color.White;
             this.btn_edit_delete.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit_delete.Location = new System.Drawing.Point(749, 159);
+            this.btn_edit_delete.Location = new System.Drawing.Point(762, 174);
             this.btn_edit_delete.Name = "btn_edit_delete";
             this.btn_edit_delete.Size = new System.Drawing.Size(302, 220);
             this.btn_edit_delete.TabIndex = 13;
@@ -87,7 +88,7 @@
             // 
             this.btn_new.BackColor = System.Drawing.Color.White;
             this.btn_new.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_new.Location = new System.Drawing.Point(279, 159);
+            this.btn_new.Location = new System.Drawing.Point(411, 174);
             this.btn_new.Name = "btn_new";
             this.btn_new.Size = new System.Drawing.Size(293, 220);
             this.btn_new.TabIndex = 12;
@@ -105,12 +106,25 @@
             this.pictureBox1.TabIndex = 50;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(50, 174);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(293, 220);
+            this.button1.TabIndex = 51;
+            this.button1.Text = "Show all";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AdminChooseEMP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(1346, 577);
+            this.ClientSize = new System.Drawing.Size(1112, 577);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_edit_delete);
             this.Controls.Add(this.btn_new);
@@ -135,5 +149,6 @@
         private System.Windows.Forms.Button btn_edit_delete;
         private System.Windows.Forms.Button btn_new;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

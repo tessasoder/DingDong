@@ -15,7 +15,7 @@ namespace project_dingdong
 {
     public partial class AdminStock : Form
     {
-        MySqlDataAdapter updaten;
+       
         DataSet ds;
         int fid;
 
@@ -201,6 +201,7 @@ namespace project_dingdong
             txt_id.Enabled = true;
 
         }
-       
+
+      
     }
 }
